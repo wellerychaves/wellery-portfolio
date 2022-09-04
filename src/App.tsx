@@ -1,11 +1,15 @@
-import { useCallback, useState } from "react";
 import GlobalStyle from "./styles/global";
-import Header from "./components/Header";
+import { useCallback, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import dark from "./styles/themes/dark";
 import at from "./styles/themes/at";
+
+import Header from "./components/Header";
 import Apresentation from "./components/Apresentation";
 import About from "./components/About";
+import Skills from "./components/Skills";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 
 function App() {
 	const [theme, setTheme] = useState(dark);
@@ -20,6 +24,9 @@ function App() {
 			<Header toggleTheme={toggleTheme} />
 			<Apresentation />
 			<About />
+			<Skills />
+			<Portfolio />
+			<Contact />
 		</ThemeProvider>
 	);
 }
