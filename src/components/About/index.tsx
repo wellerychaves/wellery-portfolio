@@ -50,7 +50,7 @@ const About = () => {
 							</p>
 						</div>
 					</InfoBox>
-					<Button>Download CV</Button>
+					<Button type="button">Download CV</Button>
 				</div>
 			</div>
 		</Container>
