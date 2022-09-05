@@ -1,20 +1,19 @@
 import { Container } from "./styles";
-import tsu from "../../assets/images/tsu.svg";
-import React from "react";
 
-interface Props {
-	toggleTheme(): void;
-}
-
-const Header: React.FC<Props> = ({ toggleTheme }) => {
-	/*onClick={() => toggleTheme()}*/
+const Header = () => {
 	return (
 		<>
 			<Container>
-				<a className="logo">ツ</a>
-				<button onClick={() => toggleTheme()} id="menu">
-					T
-				</button>
+				<div id="content">
+					<a className="logo">ツ</a>
+					<nav className="navBar">
+						<a href="#top">Home</a>
+						<a href="">About Me</a>
+						<a href="">Techs</a>
+						<a href="">Portfolio</a>
+						<a href="">Contacts</a>
+					</nav>
+				</div>
 			</Container>
 		</>
 	);

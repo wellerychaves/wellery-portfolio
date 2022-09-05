@@ -1,15 +1,21 @@
-import Button from "../Button";
+import { HiOutlineMail } from "react-icons/hi";
+import { IconContext } from "react-icons";
 import {
 	FaLinkedinIn,
 	FaGithub,
 	FaTelegramPlane,
 	FaWhatsapp,
 } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
-import { HiOutlineMail } from "react-icons/hi";
-import { IconContext } from "react-icons";
-import linkedin from "../../assets/images/linkedin.svg";
-import { Buttons, ContactButton, Container, CustomInput, Line } from "./styles";
+
+import Button from "../Button";
+import {
+	Buttons,
+	Container,
+	Content,
+	CustomInput,
+	Line,
+	TextArea,
+} from "./styles";
 
 const Contact = () => {
 	return (
@@ -20,52 +26,104 @@ const Contact = () => {
 			}}
 		>
 			<Container>
-				<h2>Contact-me</h2>
+				<h2>Contact Me</h2>
 				<Line />
-				<div id="email">
-					<CustomInput type="text" placeholder="Name" />
-					<CustomInput type="email" placeholder="E-mail" />
-					<CustomInput type="text" placeholder="Subject" />
-					<CustomInput type="text" placeholder="Your Message" />
-					<Button type="submit">Send Message</Button>
-				</div>
-				<Buttons id="buttons">
-					<a
-						href="https://www.linkedin.com/in/wellerychaves/"
-						target="_blank"
-						type="button"
-					>
-						<FaLinkedinIn />
-					</a>
-					<a
-						href="https://github.com/wellerychaves"
-						target="_blank"
-						type="button"
-					>
-						<FaGithub />
-					</a>
-					<a
-						href="https://t.me/WelleryC"
-						target="_blank"
-						type="button"
-					>
-						<FaTelegramPlane />
-					</a>
-					<a
-						href="https://wa.me/5583988434748"
-						target="_blank"
-						type="button"
-					>
-						<FaWhatsapp />
-					</a>
-					<a
-						href="mailto:wellerychaves@outlook.com"
-						target="_blank"
-						type="button"
-					>
-						<HiOutlineMail />
-					</a>
-				</Buttons>
+				<Content>
+					<div id="email">
+						<CustomInput type="text" placeholder="Name" />
+						<CustomInput type="email" placeholder="E-mail" />
+						<CustomInput type="text" placeholder="Subject" />
+						<TextArea placeholder="Your Message" />
+						<Button type="submit">Send Message</Button>
+					</div>
+					<Buttons id="buttons">
+						<div className="buttonDiv">
+							<a
+								className="iconButton"
+								href="https://www.linkedin.com/in/wellerychaves/"
+								target="_blank"
+								type="button"
+							>
+								<FaLinkedinIn />
+							</a>
+							<a
+								className="buttonText"
+								href="https://www.linkedin.com/in/wellerychaves/"
+								target="_blank"
+							>
+								LinkedIn
+							</a>
+						</div>
+						<div className="buttonDiv">
+							<a
+								className="iconButton"
+								href="https://github.com/wellerychaves"
+								target="_blank"
+								type="button"
+							>
+								<FaGithub />
+							</a>
+							<a
+								className="buttonText"
+								href="https://github.com/wellerychaves"
+								target="_blank"
+							>
+								GitHub
+							</a>
+						</div>
+						<div className="buttonDiv">
+							<a
+								className="iconButton"
+								href="https://t.me/WelleryC"
+								target="_blank"
+								type="button"
+							>
+								<FaTelegramPlane />
+							</a>
+							<a
+								className="buttonText"
+								href="https://t.me/WelleryC"
+								target="_blank"
+							>
+								Telegram
+							</a>
+						</div>
+						<div className="buttonDiv">
+							<a
+								className="iconButton"
+								href="https://wa.me/5583988434748"
+								target="_blank"
+								type="button"
+							>
+								<FaWhatsapp />
+							</a>
+							<a
+								className="buttonText"
+								href="https://wa.me/5583988434748"
+								target="_blank"
+							>
+								Whatsapp
+							</a>
+						</div>
+						<div className="buttonDiv">
+							<a
+								className="iconButton"
+								href="mailto:wellerychaves@outlook.com"
+								target="_blank"
+								type="button"
+							>
+								<HiOutlineMail />
+							</a>
+							<a
+								className="buttonText"
+								href="mailto:wellerychaves@outlook.com"
+								target="_blank"
+							>
+								E-Mail
+							</a>
+						</div>
+					</Buttons>
+				</Content>
 			</Container>
 		</IconContext.Provider>
 	);
