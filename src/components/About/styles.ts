@@ -3,18 +3,16 @@ import styled from "styled-components";
 export const Container = styled.section`
 	width: 100vw;
 	height: 1000px;
-	background-color: ${(props) => props.theme.colors.background2};
+	margin: 0 auto;
+	transition: 0.3s;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-family: var(--tajawal);
-	transition: 0.3s;
-
-	@media only screen and (min-width: 700px) {
-	}
+	background-color: ${(props: any) => props.theme.colors.background2};
 
 	#line {
-		background-color: ${(props) => props.theme.colors.primary};
+		background-color: ${(props: any) => props.theme.colors.primary};
 		width: 94px;
 		height: 3px;
 		border-radius: 3px;
@@ -51,13 +49,11 @@ export const Container = styled.section`
 		}
 
 		@media only screen and (min-width: 600px) {
-		max-width: 90vw;
-		
+			max-width: 90vw;
 		}
-		
+
 		@media only screen and (min-width: 700px) {
 			h2 {
-				font-size: calc(var(--csize) * 6);
 				width: fit-content;
 				height: fit-content;
 			}
@@ -73,7 +69,7 @@ export const Container = styled.section`
 export const ImageBox = styled.figure`
 	width: 280px;
 	height: 339.23px;
-	background: ${(props) => props.theme.colors.background};
+	background: ${(props: any) => props.theme.colors.background};
 	box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.4);
 	border-radius: 4px;
 	margin-bottom: 20px;
@@ -104,7 +100,7 @@ export const InfoBox = styled.div`
 	height: 280px;
 	margin-top: 26px;
 	border-radius: 5px;
-	border: 2px solid ${(props) => props.theme.colors.primary};
+	border: 2px solid ${(props: any) => props.theme.colors.primary};
 	display: flex;
 	flex-direction: column;
 	padding: 2rem 1rem;
