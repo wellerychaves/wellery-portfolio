@@ -17,6 +17,6 @@ export const Container = styled.button`
 
 	@media only screen and (min-width: 700px) {
 		max-width: 168px;
-		font-size: calc(var(--csize) * 2.0);
+		font-size: calc(var(--csize) * 2);
 	}
 `;
