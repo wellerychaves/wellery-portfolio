@@ -11,7 +11,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 	return (
 		<>
 			<Container>
-				<img id="tsu" src={tsu} alt="tsu kanji" />
+				<a className="logo">ツ</a>
 				<button onClick={() => toggleTheme()} id="menu">
 					T
 				</button>

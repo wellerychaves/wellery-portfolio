@@ -10,7 +10,11 @@ export const Container = styled.header`
 	align-items: center;
 	justify-content: space-between;
 	padding: 10px 20px;
+	user-select: none;
 
+	#tsu {
+		color: red;
+	}
 	#menu {
 		all: unset;
 		height: fit-content;
