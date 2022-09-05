@@ -10,6 +10,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
 	const [theme, setTheme] = useState(dark);
@@ -27,6 +28,7 @@ function App() {
 			<Skills />
 			<Portfolio />
 			<Contact />
+			<Footer />
 		</ThemeProvider>
 	);
 }
