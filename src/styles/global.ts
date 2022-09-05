@@ -16,6 +16,22 @@ h2 {
   font-size: calc(var(--csize) * 4);
 }
 
+.logo {
+  all: unset;
+  cursor: pointer;
+  line-height: 50px;
+  padding-bottom: 10px;
+  font-family: var(--zen);
+  font-size: calc(var(--csize) * 6);
+  color: ${(props) => props.theme.colors.primary};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  :hover {
+    font-weight: bold;
+  }
+}
+
 body {
   background: #121212;
   color: white;
