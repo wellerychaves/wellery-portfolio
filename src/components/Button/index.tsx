@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "./styles";
 
 interface ButtonProps {
-	type: string;
+	type: "button" | "submit" | "reset" | undefined;
 	children: React.ReactNode;
 }
 
