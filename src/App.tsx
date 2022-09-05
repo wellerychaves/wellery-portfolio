@@ -22,13 +22,13 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
-			<Header toggleTheme={toggleTheme} />
+			<Header />
 			<Apresentation />
 			<About />
 			<Skills />
 			<Portfolio />
 			<Contact />
-			<Footer />
+			<Footer toggleTheme={toggleTheme} />
 		</ThemeProvider>
 	);
 }
