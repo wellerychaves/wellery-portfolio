@@ -3,7 +3,7 @@ import { Container, Line } from "./styles";
 
 const Portfolio = () => {
 	return (
-		<Container>
+		<Container id="portfolio">
 			<h2>My Portifolio</h2>
 			<Line />
 			<div id="cards">
