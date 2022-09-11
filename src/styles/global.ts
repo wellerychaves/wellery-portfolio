@@ -15,13 +15,34 @@ export default createGlobalStyle`
   -o-transition: all .4s ease-in-out;
   -ms-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+
+
+    /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.colors.background};
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme.colors.primary};
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${(props) => props.theme.colors.primaryD};
+  }
 }
 
 h2 {
-  font-family: var(--tajawal);
   font-weight: 500;
-  font-size: calc(var(--csize) * 4);
   user-select: none;
+  font-family: var(--tajawal);
+  font-size: calc(var(--csize) * 4);
 
   @media only screen and (min-width: 700px) {
     font-size: calc(var(--csize) * 5);
