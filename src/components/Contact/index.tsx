@@ -25,7 +25,7 @@ const Contact = () => {
 				size: "20px",
 			}}
 		>
-			<Container>
+			<Container id="ContactMe">
 				<h2>Contact Me</h2>
 				<Line />
 				<Content>
