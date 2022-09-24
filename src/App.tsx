@@ -4,7 +4,8 @@ import { ThemeProvider } from "styled-components";
 import dark from "./styles/themes/dark";
 import at from "./styles/themes/at";
 
-import Header from "./components/Header";
+import HeaderMobile from "./components/HeaderMobile";
+import HeaderDesktop from "./components/HeaderDesktop";
 import Apresentation from "./components/Apresentation";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -22,7 +23,8 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
-			<Header />
+			<HeaderMobile />
+			<HeaderDesktop />
 			<Apresentation />
 			<About />
 			<Skills />
@@ -34,4 +36,3 @@ function App() {
 }
 
 export default App;
-

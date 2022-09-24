@@ -1,11 +1,11 @@
 import { Container } from "./styles";
 
-const Header = () => {
+const HeaderDesktop = () => {
 	return (
 		<Container>
 			<div id="content">
 				<a className="logo">ツ</a>
-				<nav className="navBar">
+				<nav id="navBar">
 					<a href="#top">Home</a>
 					<a href="#about">About Me</a>
 					<a href="#skills">Techs</a>
@@ -17,4 +17,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default HeaderDesktop;
