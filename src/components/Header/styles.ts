@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.header`
+export const MobileHeader = styled.header`
 	position: fixed;
 	top: 0;
 	left: center;
@@ -55,7 +55,7 @@ export const Container = styled.header`
 		bottom: 0;
 	}
 
-	input[type]:checked ~ span.top {
+	/* 	input[type]:checked ~ span.top {
 		transform: rotate(46deg);
 		transform-origin: top left;
 		width: 25px;
@@ -74,37 +74,63 @@ export const Container = styled.header`
 		transform: translateX(-20px);
 		opacity: 0;
 	}
-
+ 	*/
 	@media only screen and (min-width: 751px) {
 		display: none;
 	}
+
+	#navBar {
+		width: 100%;
+		height: 300px;
+		position: absolute;
+		left: 0;
+		top: 60px;
+		font-weight: 600;
+		text-decoration: none;
+		font-family: var(--montserrat);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		background-color: #000000ee;
+		padding-left: 20px;
+
+		background: rgba(0, 0, 0, 0.7);
+		backdrop-filter: blur(3px);
+		-webkit-backdrop-filter: blur(7px);
+		box-shadow: 0 8px 32px -2px rgba(0, 0, 0, 1);
+
+		a {
+			user-select: none;
+		}
+
+		@media only screen and (min-width: 751px) {
+			display: none;
+		}
+	}
 `;
 
-export const NavBar = styled.nav`
-	width: 100%;
-	height: 300px;
-	position: absolute;
-	left: 0;
-	top: 60px;
-	font-weight: 600;
-	text-decoration: none;
-	font-family: var(--montserrat);
+export const DesktopHeader = styled.header`
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 60px;
+	background-color: ${(props: any) => props.theme.colors.background2};
+	border-bottom: 2px solid ${(props: any) => props.theme.colors.primary};
+	margin: 0 auto;
+	padding: 10px 10%;
+	user-select: none;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	background-color: #000000ee;
-	padding-left: 20px;
+	align-items: center;
+	justify-content: space-between;
 
-	background: rgba(0, 0, 0, 0.7);
-	backdrop-filter: blur(3px);
-	-webkit-backdrop-filter: blur(7px);
-	box-shadow: 0 8px 32px -2px rgba(0, 0, 0, 1);
-
-	a {
-		user-select: none;
+	#navBar {
+		width: 30rem;
+		display: flex;
+		justify-content: space-between;
+		font-family: var(--montserrat);
 	}
-	
-	@media only screen and (min-width: 751px) {
+
+	@media only screen and (max-width: 750px) {
 		display: none;
 	}
 `;

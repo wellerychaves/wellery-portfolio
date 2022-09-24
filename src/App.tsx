@@ -4,8 +4,7 @@ import { ThemeProvider } from "styled-components";
 import dark from "./styles/themes/dark";
 import at from "./styles/themes/at";
 
-import HeaderMobile from "./components/HeaderMobile";
-import HeaderDesktop from "./components/HeaderDesktop";
+import Header from "./components/Header";
 import Apresentation from "./components/Apresentation";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -23,8 +22,7 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
-			<HeaderMobile />
-			<HeaderDesktop />
+			<Header />
 			<Apresentation />
 			<About />
 			<Skills />
