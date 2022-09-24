@@ -7,7 +7,7 @@ export const Container = styled.header`
 	height: 60px;
 	background-color: ${(props: any) => props.theme.colors.background2};
 	border-bottom: 2px solid ${(props: any) => props.theme.colors.primary};
-
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -16,23 +16,21 @@ export const Container = styled.header`
 
 	#content {
 		margin: 0 auto;
-		width: 60vw;
+		width: 80vw;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
 
-		.navBar {
-			all: unset;
-			width: 450px;
-			font-weight: 600;
-			text-decoration: none;
-			display: flex;
-			justify-content: space-between;
-			font-family: var(--montserrat);
+	#navBar {
+		width: 30rem;
+		display: flex;
+		justify-content: space-between;
+		font-family: var(--montserrat);
+	}
 
-			@media only screen and (max-width: 700px) {
-				display: none;
-			}
-		}
+
+	@media only screen and (max-width: 750px) {
+		display: none;
 	}
 `;
