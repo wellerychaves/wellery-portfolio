@@ -8,14 +8,8 @@ import {
 } from "react-icons/fa";
 
 import Button from "../Button";
-import {
-	Buttons,
-	Container,
-	Content,
-	CustomInput,
-	Line,
-	TextArea,
-} from "./styles";
+import { Buttons, Container, Content, Line } from "./styles";
+import Formulario from "../Formulario";
 
 const Contact = () => {
 	return (
@@ -29,13 +23,18 @@ const Contact = () => {
 				<h2>Contact Me</h2>
 				<Line />
 				<Content>
-					<div id="email">
+					{/* 					<div id="email">
+						<label>Name</label>
 						<CustomInput type="text" placeholder="Name" />
+						<label>Email</label>
 						<CustomInput type="email" placeholder="E-mail" />
+						<label></label>
 						<CustomInput type="text" placeholder="Subject" />
 						<TextArea placeholder="Your Message" />
 						<Button type="submit">Send Message</Button>
-					</div>
+					</div> */}
+					<Formulario />
+
 					<Buttons id="buttons">
 						<div className="buttonDiv">
 							<a

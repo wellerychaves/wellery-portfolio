@@ -11,6 +11,8 @@ import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 	const [theme, setTheme] = useState(dark);
@@ -20,16 +22,34 @@ function App() {
 	}, [theme]);
 
 	return (
-		<ThemeProvider theme={theme}>
-			<GlobalStyle />
-			<Header />
-			<Apresentation />
-			<About />
-			<Skills />
-			<Portfolio />
-			<Contact />
-			<Footer toggleTheme={toggleTheme} />
-		</ThemeProvider>
+		<>
+			<ThemeProvider theme={theme}>
+				<GlobalStyle />
+				<ToastContainer
+					position="top-right"
+					autoClose={5000}
+					hideProgressBar
+					newestOnTop={false}
+					closeOnClick
+					rtl={false}
+					pauseOnFocusLoss
+					draggable
+					pauseOnHover={false}
+					theme="dark"
+					toastStyle={{
+						backgroundColor: "rgba(0,0,0,1)",
+						borderRadius: "3px",
+					}}
+				/>
+				<Header />
+				<Apresentation />
+				<About />
+				<Skills />
+				<Portfolio />
+				<Contact />
+				<Footer toggleTheme={toggleTheme} />
+			</ThemeProvider>
+		</>
 	);
 }
 

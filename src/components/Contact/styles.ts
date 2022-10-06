@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Container = styled.section`
 	width: 100vw;
 	height: fit-content;
-	background-color: ${(props: any) => props.theme.colors.background};
-	display: flex;
-	flex-direction: column;
 	padding: 50px 0;
 	user-select: none;
+	display: flex;
+	flex-direction: column;
+	background-color: ${(props: any) => props.theme.colors.background};
 
 	#email {
 		gap: 20px;
@@ -48,49 +48,6 @@ export const Content = styled.div`
 
 	@media only screen and (min-width: 650px) {
 		gap: 150px;
-	}
-`;
-
-export const CustomInput = styled.input`
-	width: 80%;
-	min-width: 288px;
-	max-width: 400px;
-	min-height: 26px;
-	padding-left: 10px;
-	border-radius: 3px;
-	background-color: #00000000;
-	font-family: var(--montserrat);
-	font-size: calc(var(--csize) * 1.2);
-	font-weight: 500;
-	box-sizing: border-box;
-	border: 2px solid ${(props: any) => props.theme.colors.primary};
-
-	@media only screen and (min-width: 700px) {
-		height: 35px;
-		gap: 5px;
-		font-size: calc(var(--csize) * 1.4);
-	}
-`;
-
-export const TextArea = styled.textarea`
-	min-width: 288px;
-	max-width: 400px;
-	min-height: 64px;
-	max-height: 96px;
-	font-weight: 500;
-	padding-top: 3px;
-	padding-left: 10px;
-	border-radius: 3px;
-	resize: none;
-	background-color: #00000000;
-	font-family: var(--montserrat);
-	font-size: calc(var(--csize) * 1.2);
-	border: 2px solid ${(props: any) => props.theme.colors.primary};
-
-	@media only screen and (min-width: 700px) {
-		height: 35px;
-		gap: 5px;
-		font-size: calc(var(--csize) * 1.4);
 	}
 `;
 
