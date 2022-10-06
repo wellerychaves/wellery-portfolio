@@ -1,5 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { Form, SubmitButton } from "./styles";
+import { toast } from "react-toastify";
 
 const Formulario = () => {
 	const sendEmail = (evt: any) => {
@@ -14,12 +15,29 @@ const Formulario = () => {
 			)
 			.then(
 				(result) => {
-					console.log(result.text);
+					toast.success("Email successfully sent", {
+						position: "top-right",
+						autoClose: 3499,
+						hideProgressBar: true,
+						closeOnClick: true,
+						pauseOnHover: false,
+						draggable: true,
+						progress: undefined,
+					});
 				},
 				(error) => {
-					console.log(error.text);
+					toast.error("Something went wrong", {
+						position: "top-right",
+						autoClose: 3499,
+						hideProgressBar: true,
+						closeOnClick: true,
+						pauseOnHover: false,
+						draggable: true,
+						progress: undefined,
+					});
 				}
 			);
+			evt.target.reset()
 	};
 	return (
 		<Form autoComplete="off" onSubmit={(evt) => sendEmail(evt)}>
