@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DefaultTheme } from "./../../styles/styled.d";
+
 export const MobileHeader = styled.header`
 	position: fixed;
 	z-index: 10;
@@ -7,8 +9,10 @@ export const MobileHeader = styled.header`
 	left: center;
 	width: 100vw;
 	height: 60px;
-	background-color: ${(props: any) => props.theme.colors.background2};
-	border-bottom: 2px solid ${(props: any) => props.theme.colors.primary};
+	background-color: ${(props: DefaultTheme) =>
+		props.theme.colors.background2};
+	border-bottom: 2px solid
+		${(props: DefaultTheme) => props.theme.colors.primary};
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
@@ -41,7 +45,7 @@ export const MobileHeader = styled.header`
 		border-radius: 100px;
 		display: inline-block;
 		transition: 0.3s ease;
-		background: ${(props) => props.theme.colors.primary};
+		background: ${(props: DefaultTheme) => props.theme.colors.primary};
 	}
 
 	.bar span.top {
@@ -115,8 +119,10 @@ export const DesktopHeader = styled.header`
 	top: 0;
 	width: 100vw;
 	height: 60px;
-	background-color: ${(props: any) => props.theme.colors.background2};
-	border-bottom: 2px solid ${(props: any) => props.theme.colors.primary};
+	background-color: ${(props: DefaultTheme) =>
+		props.theme.colors.background2};
+	border-bottom: 2px solid
+		${(props: DefaultTheme) => props.theme.colors.primary};
 	margin: 0 auto;
 	padding: 10px 10%;
 	user-select: none;

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DefaultTheme } from "./../../styles/styled.d";
+
 export const Container = styled.section`
 	width: 100vw;
 	height: fit-content;
@@ -27,7 +29,7 @@ export const Line = styled.div`
 	width: 94px;
 	height: 3px;
 	border-radius: 3px;
-	background-color: ${(props: any) => props.theme.colors.primary};
+	background-color: ${(props: DefaultTheme) => props.theme.colors.primary};
 	margin: 0 auto 20px;
 
 	@media only screen and (min-width: 700px) {
@@ -69,7 +71,7 @@ export const Buttons = styled.div`
 		height: 43px;
 		border-radius: 5px;
 		background-color: #00000000;
-		border: 2px solid ${(props: any) => props.theme.colors.primary};
+		border: 2px solid ${(props: DefaultTheme) => props.theme.colors.primary};
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -93,7 +95,7 @@ export const Buttons = styled.div`
 		all: unset;
 		font-family: var(--montserrat);
 		font-size: calc(var(--csize) * 2);
-		color: ${(props: any) => props.theme.colors.text};
+		color: ${(props: DefaultTheme) => props.theme.colors.text};
 		cursor: pointer;
 
 		@media only screen and (max-width: 550px) {

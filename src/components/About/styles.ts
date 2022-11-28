@@ -1,4 +1,8 @@
+/* eslint-disable */
+
 import styled from "styled-components";
+
+import { DefaultTheme } from "./../../styles/styled.d";
 
 export const Container = styled.section`
 	width: 100vw;
@@ -8,10 +12,12 @@ export const Container = styled.section`
 	align-items: center;
 	justify-content: center;
 	font-family: var(--tajawal);
-	background-color: ${(props: any) => props.theme.colors.background2};
+	background-color: ${(props: DefaultTheme) =>
+		props.theme.colors.background2};
 
 	#line {
-		background-color: ${(props: any) => props.theme.colors.primary};
+		background-color: ${(props: DefaultTheme) =>
+			props.theme.colors.primary};
 		width: 94px;
 		height: 3px;
 		border-radius: 3px;
@@ -91,7 +97,7 @@ export const ImageBox = styled.figure`
 	margin: 0 auto;
 	border-radius: 4px;
 	margin-bottom: 20px;
-	background: ${(props: any) => props.theme.colors.background};
+	background: ${(props: DefaultTheme) => props.theme.colors.background};
 
 	display: flex;
 	align-items: center;
@@ -117,7 +123,7 @@ export const InfoBox = styled.div`
 	margin-top: 26px;
 	border-radius: 5px;
 	font-family: var(--tajawal);
-	border: 2px solid ${(props: any) => props.theme.colors.primary};
+	border: 2px solid ${(props: DefaultTheme) => props.theme.colors.primary};
 
 	#row {
 		display: flex;
@@ -189,11 +195,12 @@ export const StyledA = styled.a`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 2px solid ${(props: any) => props.theme.colors.primary};
+	border: 2px solid ${(props: DefaultTheme) => props.theme.colors.primary};
 
 	:hover {
 		font-weight: 500;
-		background-color: ${(props: any) => props.theme.colors.primary};
+		background-color: ${(props: DefaultTheme) =>
+			props.theme.colors.primary};
 	}
 
 	@media only screen and (min-width: 700px) {

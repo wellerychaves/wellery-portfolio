@@ -1,4 +1,7 @@
+/* eslint-disable */
 import styled from "styled-components";
+
+import { DefaultTheme } from "./../../styles/styled.d";
 
 export const Form = styled.form`
 	width: 80vw;
@@ -14,7 +17,8 @@ export const Form = styled.form`
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		background-color: ${(props) => props.theme.colors.background};
+		background-color: ${(props: DefaultTheme) =>
+			props.theme.colors.background};
 	}
 
 	.inputBox input,
@@ -24,8 +28,8 @@ export const Form = styled.form`
 		border-radius: 4px;
 		margin-top: 0.5rem;
 		margin-bottom: 1rem;
-		color: ${(props) => props.theme.colors.text};
-		border: 2px solid ${(props) => props.theme.colors.primary};
+		color: ${(props: DefaultTheme) => props.theme.colors.text};
+		border: 2px solid ${(props: DefaultTheme) => props.theme.colors.primary};
 	}
 
 	.inputBox textarea {
@@ -41,7 +45,8 @@ export const Form = styled.form`
 		border-left: 0px solid transparent;
 		border-right: 0px solid transparent;
 
-		background-color: ${(props) => props.theme.colors.background};
+		background-color: ${(props: DefaultTheme) =>
+			props.theme.colors.background};
 	}
 
 	.form__field:valid ~ label,
@@ -49,27 +54,31 @@ export const Form = styled.form`
 		padding: 0 1rem;
 		border-radius: 10px;
 		font-weight: lighter;
-		color: ${(props) => props.theme.colors.text};
+		color: ${(props: DefaultTheme) => props.theme.colors.text};
 		transform: translateX(10px) translateY(-21px);
-		background-color: ${(props) => props.theme.colors.background};
-		border-left: 3px solid ${(props) => props.theme.colors.primary};
-		border-right: 3px solid ${(props) => props.theme.colors.primary};
+		background-color: ${(props: DefaultTheme) =>
+			props.theme.colors.background};
+		border-left: 3px solid
+			${(props: DefaultTheme) => props.theme.colors.primary};
+		border-right: 3px solid
+			${(props: DefaultTheme) => props.theme.colors.primary};
 	}
 `;
 
 export const SubmitButton = styled.input`
 	width: 7rem;
 	height: 2.5rem;
-	color: ${(props) => props.theme.colors.text};
-	border: 2px solid ${(props) => props.theme.colors.primary};
+	color: ${(props: DefaultTheme) => props.theme.colors.text};
+	border: 2px solid ${(props: DefaultTheme) => props.theme.colors.primary};
 	border-radius: 4px;
-	
+
 	cursor: pointer;
 	transition: 200ms;
 
 	:hover {
-		color: ${(props) => props.theme.colors.text};
-		background-color: ${(props) => props.theme.colors.primary};
+		color: ${(props: DefaultTheme) => props.theme.colors.text};
+		background-color: ${(props: DefaultTheme) =>
+			props.theme.colors.primary};
 		font-weight: bold;
 	}
 `;

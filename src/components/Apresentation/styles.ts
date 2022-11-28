@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
+import { DefaultTheme } from "./../../styles/styled.d";
+
 export const Container = styled.section`
 	width: 100vw;
 	height: 100vh;
-	background-color: ${(props: any) => props.theme.colors.background};
+	background-color: ${(props: DefaultTheme) => props.theme.colors.background};
 
 	font-family: var(--montserrat);
 	font-weight: 500;

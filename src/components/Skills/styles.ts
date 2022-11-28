@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
+import { DefaultTheme } from "./../../styles/styled.d";
+
 export const Container = styled.section`
 	width: 100vw;
 	height: fit-content;
 	padding-bottom: 50px;
 	font-family: var(--tajawal);
 	font-size: calc(var(--csize) * 1.6);
-	background-color: ${(props: any) => props.theme.colors.background};
+	background-color: ${(props: DefaultTheme) => props.theme.colors.background};
 
 	#content {
 		max-width: 50vw;
@@ -50,7 +52,7 @@ export const Line = styled.div`
 	width: 94px;
 	height: 3px;
 	border-radius: 3px;
-	background-color: ${(props: any) => props.theme.colors.primary};
+	background-color: ${(props: DefaultTheme) => props.theme.colors.primary};
 
 	@media only screen and (min-width: 700px) {
 		width: 146px;

@@ -1,4 +1,7 @@
+/* eslint-disable */
 import styled from "styled-components";
+
+import { DefaultTheme } from "./../../styles/styled.d";
 
 export const Container = styled.button`
 	max-width: 144px;
@@ -8,11 +11,12 @@ export const Container = styled.button`
 	margin-top: 16px;
 	border-radius: 5px;
 	transition: 100ms;
-	border: 2px solid ${(props: any) => props.theme.colors.primary};
+	border: 2px solid ${(props: DefaultTheme) => props.theme.colors.primary};
 
 	:hover {
 		font-weight: 500;
-		background-color: ${(props: any) => props.theme.colors.primary};
+		background-color: ${(props: DefaultTheme) =>
+			props.theme.colors.primary};
 	}
 
 	@media only screen and (min-width: 700px) {

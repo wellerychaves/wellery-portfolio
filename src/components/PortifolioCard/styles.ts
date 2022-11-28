@@ -1,4 +1,6 @@
+/* eslint-disable */
 import styled from "styled-components";
+import { DefaultTheme } from "./../../styles/styled.d";
 
 export const Container = styled.div`
 	width: 280px;
@@ -25,11 +27,13 @@ export const Container = styled.div`
 			padding: 0.4rem 1.1rem;
 			background-color: #00000000;
 			font-family: var(--tajawal);
-			color: ${(props: any) => props.theme.colors.text};
-			border: 2px solid ${(props: any) => props.theme.colors.primary};
+			color: ${(props: DefaultTheme) => props.theme.colors.text};
+			border: 2px solid
+				${(props: DefaultTheme) => props.theme.colors.primary};
 
 			:hover {
-				background-color: ${(props: any) => props.theme.colors.primary};
+				background-color: ${(props: DefaultTheme) =>
+					props.theme.colors.primary};
 			}
 		}
 	}
@@ -55,8 +59,9 @@ export const Figure = styled.figure`
 		font-weight: bold;
 		font-family: var(--zen);
 		font-size: calc(var(--csize) * 3);
-		color: ${(props: any) => props.theme.colors.primary};
-		background-color: ${(props: any) => props.theme.colors.background2};
+		color: ${(props: DefaultTheme) => props.theme.colors.primary};
+		background-color: ${(props: DefaultTheme) =>
+			props.theme.colors.background2};
 	}
 
 	p {
