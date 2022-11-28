@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Figure } from "./styles";
 
 const PortifolioCard = () => {
@@ -6,7 +5,7 @@ const PortifolioCard = () => {
 		<Container>
 			<Figure>
 				<div>SOON</div>
-                <h5>Lorem Ipsum</h5>
+				<h5>Lorem Ipsum</h5>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Eaque ducimus nobis sint eius voluptate rem harum autem quia

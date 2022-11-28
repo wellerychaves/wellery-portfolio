@@ -1,6 +1,8 @@
-import emailjs from "@emailjs/browser";
-import { Form, SubmitButton } from "./styles";
 import { toast } from "react-toastify";
+
+import emailjs from "@emailjs/browser";
+
+import { Form, SubmitButton } from "./styles";
 
 const Formulario = () => {
 	const sendEmail = (evt: any) => {
@@ -37,7 +39,7 @@ const Formulario = () => {
 					});
 				}
 			);
-			evt.target.reset()
+		evt.target.reset();
 	};
 	return (
 		<Form autoComplete="off" onSubmit={(evt) => sendEmail(evt)}>

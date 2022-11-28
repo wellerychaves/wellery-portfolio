@@ -1,5 +1,6 @@
-import { Container } from "./styled";
 import React from "react";
+
+import { Container } from "./styled";
 
 interface Props {
 	toggleTheme(): void;

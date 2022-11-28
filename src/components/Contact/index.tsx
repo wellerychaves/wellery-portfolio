@@ -1,4 +1,3 @@
-import { HiOutlineMail } from "react-icons/hi";
 import { IconContext } from "react-icons";
 import {
 	FaLinkedinIn,
@@ -6,10 +5,11 @@ import {
 	FaTelegramPlane,
 	FaWhatsapp,
 } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 
 import Button from "../Button";
-import { Buttons, Container, Content, Line } from "./styles";
 import Formulario from "../Formulario";
+import { Buttons, Container, Content, Line } from "./styles";
 
 const Contact = () => {
 	return (

@@ -1,5 +1,5 @@
-import { Container, ContentRight, ImageBox, InfoBox, StyledA } from "./styles";
 import wellery from "../../assets/images/wellery.jpg";
+import { Container, ContentRight, ImageBox, InfoBox, StyledA } from "./styles";
 
 const About = () => {
 	return (
@@ -21,8 +21,8 @@ const About = () => {
 						My name is Wellery Chaves. I'm a Full Stack Developer
 						based in Paraíba, Brazil, and I'm very passionate to my
 						work. With a year experience as a professional Full
-						Stack Developer, I have acquired some skills necessary to
-						build great websites.
+						Stack Developer, I have acquired some skills necessary
+						to build great websites.
 					</p>
 					{/* Title */}
 					<InfoBox className="personal-info">

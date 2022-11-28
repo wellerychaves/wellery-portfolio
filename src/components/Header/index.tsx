@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { DesktopHeader, MobileHeader } from "./styles";
 
 const Header = () => {

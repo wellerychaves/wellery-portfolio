@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, Line, Skill } from "./styles";
+
 import skill from "../../utils/skills";
+import { Container, Line, Skill } from "./styles";
 
 const Skills = () => {
 	const techs = skill.techs.map((skill, index) => <p key={index}>{skill}</p>);
