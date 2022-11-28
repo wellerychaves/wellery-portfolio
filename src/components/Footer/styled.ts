@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DefaultTheme } from "./../../styles/styled.d";
+
 export const Container = styled.footer`
 	width: 100vw;
 	height: 120px;
@@ -9,8 +11,8 @@ export const Container = styled.footer`
 	flex-direction: column;
 	justify-content: space-around;
 	font-family: var(--montserrat);
-	background-color: ${(props: any) => props.theme.colors.background};
-	border-top: 3px solid ${(props: any) => props.theme.colors.primary};
+	background-color: ${(props: DefaultTheme) => props.theme.colors.background};
+	border-top: 3px solid ${(props: DefaultTheme) => props.theme.colors.primary};
 	cursor: default;
 	user-select: none;
 
@@ -23,7 +25,7 @@ export const Container = styled.footer`
 
 	span {
 		font-weight: 600;
-		color: ${(props: any) => props.theme.colors.primary};
+		color: ${(props: DefaultTheme) => props.theme.colors.primary};
 	}
 
 	button {
