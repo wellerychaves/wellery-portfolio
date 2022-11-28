@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import { DefaultTheme } from "./styled.d";
+
 export default createGlobalStyle`
 
 	* {
@@ -8,7 +10,7 @@ export default createGlobalStyle`
 		outline: 0;
 		box-sizing: border-box;
 		text-decoration: none;
-		color: ${(props: any) => props.theme.colors.text};
+		color: ${(props: DefaultTheme) => props.theme.colors.text};
 
 		-webkit-transition: all .4s ease-in-out;
 		-moz-transition: all .4s ease-in-out;
