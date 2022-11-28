@@ -1,25 +1,26 @@
-import GlobalStyle from "./styles/global";
-import { useCallback, useState } from "react";
-import { ThemeProvider } from "styled-components";
-import dark from "./styles/themes/dark";
-import at from "./styles/themes/at";
+import { ToastContainer } from "react-toastify";
 
-import Header from "./components/Header";
-import Apresentation from "./components/Apresentation";
+import { DefaultTheme, ThemeProvider } from "styled-components";
+
 import About from "./components/About";
-import Skills from "./components/Skills";
-import Portfolio from "./components/Portfolio";
+import Apresentation from "./components/Apresentation";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { ToastContainer } from "react-toastify";
+import Header from "./components/Header";
+import Portfolio from "./components/Portfolio";
+import Skills from "./components/Skills";
+import GlobalStyle from "./styles/global";
+import at from "./styles/themes/at";
+import dark from "./styles/themes/dark";
 import "react-toastify/dist/ReactToastify.css";
+import usePersistedState from "./utils/usePersistedState";
 
 function App() {
-	const [theme, setTheme] = useState(dark);
+	const [theme, setTheme] = usePersistedState<DefaultTheme>("theme", dark);
 
-	const toggleTheme = useCallback(() => {
+	const toggleTheme = () => {
 		setTheme(theme.title === "dark" ? at : dark);
-	}, [theme]);
+	};
 
 	return (
 		<>
