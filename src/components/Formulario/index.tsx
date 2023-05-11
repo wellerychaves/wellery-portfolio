@@ -10,7 +10,7 @@ const Formulario = () => {
 
 		emailjs
 			.sendForm(
-				"service_106063",
+				"service_108055",
 				"template_52rw9bf",
 				evt.target,
 				"ZmWaCznNTG3x7kLSG"
@@ -45,27 +45,40 @@ const Formulario = () => {
 		<Form autoComplete="off" onSubmit={(evt) => sendEmail(evt)}>
 			<div className="inputBox">
 				<input
+					id="Name"
 					required
 					type="text"
 					name="user_name"
 					className="form__field"
 				/>
-				<label className="form__label">Name</label>
+				<label for="Name" className="form__label">
+					Name
+				</label>
 			</div>
 			<div className="inputBox">
 				<input
+					id="Email"
 					required
 					type="email"
 					name="user_email"
 					className="form__field"
 				/>
-				<label className="form__label">Email</label>
+				<label for="Email" className="form__label">
+					Email
+				</label>
 			</div>
 			<div className="inputBox">
-				<textarea required name="message" className="form__field" />
-				<label className="form__label">Message</label>
+				<textarea
+					id="Message"
+					required
+					name="message"
+					className="form__field from_text_area"
+				/>
+				<label for="Message" className="form__label">
+					Message
+				</label>
 			</div>
-			<SubmitButton type="submit" value="Send" />
+			<SubmitButton type="submit" value="Send Message" />
 		</Form>
 	);
 };

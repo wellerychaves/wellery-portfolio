@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-import { DefaultTheme } from "./styled.d";
-
 export default createGlobalStyle`
 
 	* {
@@ -10,7 +8,7 @@ export default createGlobalStyle`
 		outline: 0;
 		box-sizing: border-box;
 		text-decoration: none;
-		color: ${(props: DefaultTheme) => props.theme.colors.text};
+		color: ${(props) => props.theme.colors.text};
 
 		-webkit-transition: all .4s ease-in-out;
 		-moz-transition: all .4s ease-in-out;
@@ -47,7 +45,7 @@ export default createGlobalStyle`
 		font-size: calc(var(--csize) * 4);
 
 		@media only screen and (min-width: 700px) {
-			font-size: calc(var(--csize) * 5);
+			font-size: calc(var(--csize) * 6);
 		}
 	}
 
@@ -58,7 +56,7 @@ export default createGlobalStyle`
 		padding-bottom: 10px;
 		font-family: var(--zen);
 		font-size: calc(var(--csize) * 6);
-		color: ${(props: any) => props.theme.colors.primary};
+		color: ${(props) => props.theme.colors.primary};
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -70,8 +68,8 @@ export default createGlobalStyle`
 	body {
 		overflow-x: hidden;
 		-webkit-font-smoothing: antialiased;
-		color: ${(props: any) => props.theme.colors.text};
-		background:${(props: any) => props.theme.colors.background};
+		color: ${(props) => props.theme.colors.text};
+		background:${(props) => props.theme.colors.background};
 	}
 
 	#root {

@@ -1,46 +1,58 @@
 /* eslint-disable */
 import styled from "styled-components";
-import { DefaultTheme } from "./../../styles/styled.d";
 
 export const Container = styled.div`
-	width: 300px;
-	max-width: 300px;
-	height: 450px;
-	border-radius: 7px;
+	width: 18rem;
+	height: fit-content;
+
+	padding: 16px;
+	border-radius: 0.5rem;
+
+	gap: 1rem;
+	display: flex;
+	flex-direction: column;
+
 	font-family: var(--montserrat);
-	background-color: ${(props: any) => props.theme.colors.background};
+	background-color: ${(props) => props?.theme?.colors?.background};
 `;
 
 export const Figure = styled.figure`
+	width: 16rem;
+	height: 9rem;
+	border-radius: 2px;
+
+	font-weight: bold;
+	font-family: var(--zen);
+	font-size: calc(var(--csize) * 3);
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	div {
-		width: 279px;
-		height: 148px;
-		margin-top: 10px;
-		border-radius: 5px;
-		font-weight: bold;
-		font-family: var(--zen);
-		font-size: calc(var(--csize) * 3);
-		color: ${(props: DefaultTheme) => props.theme.colors.primary};
-		background-color: ${(props: DefaultTheme) =>
-			props.theme.colors.background2};
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+	color: ${(props) => props?.theme?.colors?.primary};
+	background-color: ${(props) => props?.theme?.colors?.background2};
 `;
 
 export const CardContent = styled.div`
-	width: 93%;
+	width: 16rem;
 	margin: 0 auto;
 
+	gap: 1rem;
+	display: flex;
+	flex-direction: column;
+
+	font-weight: 400;
+
+	.cardContent_item {
+		gap: 0.5rem;
+		display: flex;
+		flex-direction: column;
+	}
+
 	h3 {
-		margin-top: 10px;
-		font-size: calc(var(--csize) * 1.8);
-		font-weight: 600;
+		font-weight: 500;
+		line-height: 24px;
+		font-size: calc(var(--csize) * 2);
 	}
 `;
 
@@ -54,27 +66,24 @@ export const TechsP = styled.p`
 `;
 
 export const ButtonsDiv = styled.div`
-	all: unset;
-	height: 50px;
-	margin-top: 15px;
-	gap: 20px;
+	width: 90%;
+	height: fit-content;
+	margin: 0 auto;
 
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
 
 	button {
-		cursor: pointer;
-		border-radius: 3px;
-		font-size: calc(var(--csize) * 1.8);
-		padding: 0.4rem 1.1rem;
-		background-color: #00000000;
-		font-family: var(--tajawal);
-		color: ${(props: DefaultTheme) => props.theme.colors.text};
-		border: 2px solid ${(props: DefaultTheme) => props.theme.colors.primary};
-		:hover {
-			background-color: ${(props: DefaultTheme) =>
-				props.theme.colors.primary};
-		}
+		max-height: 2rem;
+		
+		font-weight: 400;
+		font-size: 0.75rem;
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border: 1px solid ${(props) => props?.theme?.colors?.primary};
 	}
 `;

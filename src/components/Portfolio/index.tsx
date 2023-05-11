@@ -1,18 +1,20 @@
-import PortifolioCard from "../PortifolioCard";
-import { Container, Line } from "./styles";
+import { forwardRef, Ref } from "react";
 
-const Portfolio = () => {
+import PortifolioCard from "../PortifolioCard";
+import { Container } from "./styles";
+import Title from "../Title";
+
+const Portfolio = (_: any, ref: Ref<HTMLDivElement>) => {
 	return (
-		<Container id="portfolio">
-			<h2>My Portifolio</h2>
-			<Line />
-			<div id="cards">
-				<PortifolioCard></PortifolioCard>
-				<PortifolioCard></PortifolioCard>
-				<PortifolioCard></PortifolioCard>
+		<Container ref={ref}>
+			<Title title="Main Projects" />
+			<div className="cards">
+				<PortifolioCard />
+				<PortifolioCard />
+				<PortifolioCard />
 			</div>
 		</Container>
 	);
 };
 
-export default Portfolio;
+export default forwardRef(Portfolio);

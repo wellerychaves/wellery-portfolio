@@ -1,3 +1,4 @@
+import Button from "../Button";
 import {
 	ButtonsDiv,
 	Container,
@@ -14,24 +15,28 @@ const PortifolioCard = () => {
 				<div>SOON</div>
 			</Figure>
 			<CardContent>
-				<h3>Title</h3>
-				<DescriptionP>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Eaque ducimus nobis sint eius voluptate rem harum autem quia
-					tenetur error nostrum eos numquam accusamus quos voluptas
-					itaque, iste ad quasi?
-				</DescriptionP>
-				<h3>Techs</h3>
-				<TechsP>
-					React, Typescript, React-router-dom, MUI, React-hook-form,
-					Yup, Axios, NodeJS, Express, JWT, TypeORM, PostgreSQL,
-					Docker
-				</TechsP>
+				<div className="cardContent_item">
+					<h3>Title</h3>
+					<DescriptionP>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Eaque ducimus nobis sint eius voluptate rem harum autem
+						quia tenetur error nostrum eos numquam accusamus quos
+						voluptas itaque, iste ad quasi?
+					</DescriptionP>
+				</div>
+				<div className="cardContent_item">
+					<h3>Techs</h3>
+					<TechsP>
+						React, Typescript, React-router-dom, MUI,
+						React-hook-form, Yup, Axios, NodeJS, Express, JWT,
+						TypeORM, PostgreSQL, Docker
+					</TechsP>
+				</div>
+				<ButtonsDiv>
+					<Button type="button">Website</Button>
+					<Button type="button">Code</Button>
+				</ButtonsDiv>
 			</CardContent>
-			<ButtonsDiv>
-				<button>Preview</button>
-				<button>GitHub</button>
-			</ButtonsDiv>
 		</Container>
 	);
 };

@@ -1,38 +1,51 @@
-import { useContext } from "react";
-import { IconContext } from "react-icons";
-import { TechsContext } from "../../providers/techs/techs";
-import { Container, Line } from "./styles";
+import { useContext, forwardRef, Ref } from "react";
+import { TechsContext } from "../../providers/techs";
+import { Container } from "./styles";
+import Title from "../Title";
 
-const Skills = () => {
-	const { techs } = useContext(TechsContext);
+const Skills = (_: any, ref: Ref<HTMLDivElement>) => {
+	const { programmingLanguages, backEndDev, frontEndDev, softwareAndTools } =
+		useContext(TechsContext);
 
 	return (
-		<Container>
-			<div id="content">
-				<div id="title">
-					<h2>My Skills</h2>
-					<Line />
+		<Container ref={ref}>
+			<Title title="My Skills" />
+			<div className="skillsDiv">
+				<div className="skillType">
+					<h3 className="skillType-title">Front End development</h3>
+					<ul className="skillType-list">
+						{frontEndDev.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
 				</div>
-				<ul id="skills">
-					{techs.map((item, index) => (
-						<li key={index} id="skills-li">
-							<IconContext.Provider
-								value={{
-									size: "60px",
-									className: "skills-icons",
-								}}
-							>
-								{item.icon}
-								<span id="skills-span" key={index}>
-									{item.name}
-								</span>
-							</IconContext.Provider>
-						</li>
-					))}
-				</ul>
+				<div className="skillType">
+					<h3 className="skillType-title">Back End development</h3>
+					<ul className="skillType-list">
+						{backEndDev.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+				</div>
+				<div className="skillType">
+					<h3 className="skillType-title">Software & Tools</h3>
+					<ul className="skillType-list">
+						{softwareAndTools.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+				</div>
+				<div className="skillType">
+					<h3 className="skillType-title">Programming languages</h3>
+					<ul className="skillType-list">
+						{programmingLanguages.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+				</div>
 			</div>
 		</Container>
 	);
 };
 
-export default Skills;
+export default forwardRef(Skills);

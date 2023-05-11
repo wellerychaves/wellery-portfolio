@@ -1,15 +1,14 @@
 /* eslint-disable */
 import styled from "styled-components";
 
-import { DefaultTheme } from "./../../styles/styled.d";
-
 export const Form = styled.form`
-	width: 80vw;
-	max-width: 500px;
+	width: 100%;
+	max-width: 20rem;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
+	gap: 16px;
 	font-family: var(--montserrat);
 
 	.inputBox {
@@ -17,68 +16,83 @@ export const Form = styled.form`
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		background-color: ${(props: DefaultTheme) =>
-			props.theme.colors.background};
+		background-color: ${(props) => props?.theme?.colors?.background};
 	}
 
-	.inputBox input,
-	.inputBox textarea {
+	.form__field {
+		width: 100%;
 		resize: none;
-		padding: 0.8rem;
+		height: 3rem;
+		padding-left: 1rem;
 		border-radius: 4px;
-		margin-top: 0.5rem;
-		margin-bottom: 1rem;
-		color: ${(props: DefaultTheme) => props.theme.colors.text};
-		border: 2px solid ${(props: DefaultTheme) => props.theme.colors.primary};
+		padding-right: 1rem;
+
+		color: ${(props) => props?.theme?.colors?.text};
+		border: 2px solid ${(props) => props?.theme?.colors?.primary};
 	}
 
-	.inputBox textarea {
+	.from_text_area {
 		height: 7rem;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		padding-right: 1rem;
 	}
 
-	.inputBox label {
+	.form__label {
 		position: absolute;
-		left: 0.6rem;
-		top: 1.3rem;
+		left: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
+
 		font-size: 0.9rem;
 		transition: 0.4s;
 		border-left: 0px solid transparent;
 		border-right: 0px solid transparent;
 
-		background-color: ${(props: DefaultTheme) =>
-			props.theme.colors.background};
+		color: #696969;
+		background-color: ${(props) => props?.theme?.colors?.background};
 	}
 
-	.form__field:valid ~ label,
-	.form__field:focus ~ label {
+	.from_text_area + .form__label {
+		position: absolute;
+		top: 24px;
+		left: 1rem;
+	}
+
+	.form__field:focus-within + .form__label {
 		padding: 0 1rem;
-		border-radius: 10px;
 		font-weight: lighter;
-		color: ${(props: DefaultTheme) => props.theme.colors.text};
-		transform: translateX(10px) translateY(-21px);
-		background-color: ${(props: DefaultTheme) =>
-			props.theme.colors.background};
-		border-left: 3px solid
-			${(props: DefaultTheme) => props.theme.colors.primary};
-		border-right: 3px solid
-			${(props: DefaultTheme) => props.theme.colors.primary};
+		color: ${(props) => props?.theme?.colors?.text};
+		transform: translateX(10px) translateY(-2rem);
+		background-color: ${(props) => props?.theme?.colors?.background};
+		border-left: 2px solid ${(props) => props?.theme?.colors?.primary};
+		border-right: 2px solid ${(props) => props?.theme?.colors?.primary};
+	}
+
+	@media screen and (min-width: 756px) {
+		max-width: 25rem;
+		align-items: flex-start;
+	}
+	
+	@media screen and (min-width: 900px) {
+		max-width: 28.5rem;
+		align-items: flex-start;
 	}
 `;
 
 export const SubmitButton = styled.input`
 	width: 7rem;
 	height: 2.5rem;
-	color: ${(props: DefaultTheme) => props.theme.colors.text};
-	border: 2px solid ${(props: DefaultTheme) => props.theme.colors.primary};
+	color: ${(props) => props?.theme?.colors?.text};
+	border: 2px solid ${(props) => props?.theme?.colors?.primary};
 	border-radius: 4px;
 
 	cursor: pointer;
 	transition: 200ms;
 
 	:hover {
-		color: ${(props: DefaultTheme) => props.theme.colors.text};
-		background-color: ${(props: DefaultTheme) =>
-			props.theme.colors.primary};
+		color: ${(props) => props?.theme?.colors?.text};
+		background-color: ${(props?) => props?.theme?.colors?.primary};
 		font-weight: bold;
 	}
 `;

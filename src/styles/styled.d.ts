@@ -1,5 +1,4 @@
 import "styled-components";
-
 declare module "styled-components" {
 	export interface DefaultTheme extends ThemeInterface {
 		title: string;
@@ -8,10 +7,11 @@ declare module "styled-components" {
 			primary: string;
 			primaryD: string;
 
-			background: string;
-			mica: string;
-			background2: string;
 			text: string;
+			darkText: string;
+			mica: string;
+			background: string;
+			background2: string;
 		};
 	}
 }

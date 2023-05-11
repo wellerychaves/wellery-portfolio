@@ -1,11 +1,16 @@
-import { TechsProvider } from "./techs/techs";
+import { InfosProvider } from "./infos";
+import { TechsProvider } from "./techs";
 
 type ProviderProps = {
 	children: React.ReactNode;
 };
 
 const Providers = ({ children }: ProviderProps) => {
-	return <TechsProvider>{children}</TechsProvider>;
+	return (
+		<TechsProvider>
+			<InfosProvider>{children}</InfosProvider>
+		</TechsProvider>
+	);
 };
 
 export default Providers;

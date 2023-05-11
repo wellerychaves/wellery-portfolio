@@ -1,31 +1,28 @@
 import styled from "styled-components";
 
-import { DefaultTheme } from "./../../styles/styled.d";
-
 export const Container = styled.footer`
 	width: 100vw;
-	height: 120px;
+	height: 3.5rem;
+
 	display: flex;
-	margin: 0 auto;
 	align-items: center;
-	flex-direction: column;
-	justify-content: space-around;
-	font-family: var(--montserrat);
-	background-color: ${(props: DefaultTheme) => props.theme.colors.background};
-	border-top: 3px solid ${(props: DefaultTheme) => props.theme.colors.primary};
+	justify-content: center;
+
 	cursor: default;
 	user-select: none;
+	font-family: var(--montserrat);
+	font-size: calc(var(--csize) * 1.2);
 
-	p {
-		font-size: calc(var(--csize) * 1.3);
-		@media only screen and (min-width: 700px) {
-			font-size: calc(var(--csize) * 1.6);
-		}
+	border-top: 2px solid ${(props) => props?.theme?.colors?.primary};
+
+	@media only screen and (min-width: 768px) {
+		height: 4rem;
+		font-size: calc(var(--csize) * 1.6);
 	}
 
-	span {
-		font-weight: 600;
-		color: ${(props: DefaultTheme) => props.theme.colors.primary};
+	@media only screen and (min-width: 1200px) {
+		height: 5rem;
+		font-size: calc(var(--csize) * 1.6);
 	}
 
 	button {
@@ -33,5 +30,8 @@ export const Container = styled.footer`
 		cursor: help;
 		width: fit-content;
 		height: fit-content;
+		font-weight: 600;
+
+		color: ${(props) => props?.theme?.colors?.primary};
 	}
 `;

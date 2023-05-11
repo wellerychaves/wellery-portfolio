@@ -1,87 +1,76 @@
 import styled from "styled-components";
 
-import { DefaultTheme } from "./../../styles/styled.d";
-
 export const Container = styled.section`
 	width: 100vw;
-	height: fit-content;
-	padding-bottom: 50px;
-	font-family: var(--tajawal);
-	font-size: calc(var(--csize) * 1.6);
-	background-color: ${(props: DefaultTheme) => props.theme.colors.background};
+	margin: 0 auto;
 
-	#content {
-		max-width: 50vw;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		margin: 0 auto;
-	}
+	display: flex;
+	flex-direction: column;
 
-	#title {
-		margin: 0 auto;
-		padding-top: 25px;
+	font-size: 1rem;
+	font-weight: 400;
+	font-family: var(--montserrat);
+
+	background-color: ${(props) => props?.theme?.colors?.background};
+
+	.skillsDiv {
 		width: fit-content;
+		max-width: 90%;
+		margin: 0 auto;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+
+		gap: 1rem;
 		display: flex;
-		align-items: center;
 		flex-direction: column;
-	}
-
-	#skills {
-		max-width: 600px;
-		margin: 20px auto;
-		text-transform: capitalize;
-
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
 		justify-content: space-around;
-		border: 1px solid red;
+		box-sizing: border-box;
 	}
+	.skillType {
+		width: fit-content;
 
-	#skills-li {
+		gap: 0.5rem;
 		display: flex;
-		align-items: center;
 		flex-direction: column;
-
-		margin: 10px;
 	}
 
-	.skills-icons {
-		all: unset;
-		fill: ${(props) => props.theme.colors.text};
-		margin: 1px;
-		transition: 0s;
+	.skillType-title {
+		width: 16rem;
+		font-size: 24px;
+		font-weight: 500;
+		font-family: var(--tajawal);
+
+		color: ${(props) => props?.theme?.colors?.primary};
 	}
 
-	.skills-icons:hover {
-		transition: 0s;
-		transform: none;
-		fill: ${(props) => props.theme.colors.primary};
+	.skillType-list {
+		width: 100%;
+
+		gap: 4px;
+		display: flex;
+		list-style: none;
+		flex-direction: column;
 	}
 
-	.skills-icons:hover #skills-span {
-		color: darkmagenta;
+	@media only screen and (min-width: 680px) {
+		min-height: 44rem;
+		.skillsDiv {
+			gap: 2rem;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: flex-start;
+		}
 	}
 
-	#skills-span {
-		font-size: 1rem;
-		color: ${(props) => props.theme.colors.text};
-	}
+	@media only screen and (min-width: 1024px) {
+		.skillsDiv {
+			gap: 2rem;
+			justify-content: space-between;
+		}
 
-	@media only screen and (min-width: 700px) {
-	}
-`;
-
-export const Line = styled.div`
-	width: 94px;
-	height: 3px;
-	border-radius: 3px;
-	background-color: ${(props: DefaultTheme) => props.theme.colors.primary};
-
-	@media only screen and (min-width: 700px) {
-		width: 146px;
-		margin-left: 0;
+		.skillType-title {
+			width: fit-content;
+			font-size: 28px;
+		}
 	}
 `;
