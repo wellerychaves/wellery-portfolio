@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 
 export const tools = {
 	Yarn: "yarni.com",
@@ -7,6 +8,8 @@ export const studing = {
 	Bun: "bundaum",
 };
 
+=======
+>>>>>>> main
 const skills = {
 	techs: [
 		"GIT",
@@ -43,6 +46,7 @@ const skills = {
 	studing: ["Bun", "AWS", "Django", "MongoDB", "Cucumber"],
 };
 
+<<<<<<< HEAD
 const skillsIcons = {
 	techs: {
 		javascript:
@@ -52,3 +56,6 @@ const skillsIcons = {
 };
 
 */
+=======
+export default skills;
+>>>>>>> main
