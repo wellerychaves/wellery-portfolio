@@ -23,4 +23,53 @@ dist-ssr
 *.sln
 *.sw?
 
-.vercel
+# Dependências
+node_modules/
+.yarn/
+.yarnrc
+.pnp.*
+
+# Arquivos compilados
+dist/
+build/
+out/
+*.js
+*.js.map
+*.d.ts
+
+# Arquivos de cache e logs
+*.log
+logs/
+*.cache
+.cache/
+*.pid
+*.seed
+*.pid.lock
+
+# Outros arquivos gerados
+yarn-error.log
+coverage/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos de configuração
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Arquivos do editor
+.vscode/
+*.swp
+*.swo
+
+# Arquivos de teste
+coverage/
+*.snap
+
+# Outros
+.DS_Store
+Thumbs.db

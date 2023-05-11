@@ -2,76 +2,75 @@ import styled from "styled-components";
 
 export const Container = styled.section`
 	width: 100vw;
-	height: fit-content;
-	padding-bottom: 50px;
-	font-family: var(--tajawal);
-	font-size: calc(var(--csize) * 1.6);
-	background-color: ${(props: any) => props.theme.colors.background};
+	margin: 0 auto;
 
-	#content {
-		max-width: 50vw;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		margin: 0 auto;
-	}
+	display: flex;
+	flex-direction: column;
 
-	#title {
-		margin: 0 auto;
-		padding-top: 25px;
+	font-size: 1rem;
+	font-weight: 400;
+	font-family: var(--montserrat);
+
+	background-color: ${(props) => props?.theme?.colors?.background};
+
+	.skillsDiv {
 		width: fit-content;
+		max-width: 90%;
+		margin: 0 auto;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+
+		gap: 1rem;
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		justify-content: space-around;
+		box-sizing: border-box;
+	}
+	.skillType {
+		width: fit-content;
+
+		gap: 0.5rem;
+		display: flex;
 		flex-direction: column;
 	}
 
-	#skills {
-		max-width: 90vw;
-		margin: 0 auto;
-		display: flex;
-		justify-content: space-around;
-		flex-direction: column;
+	.skillType-title {
+		width: 16rem;
+		font-size: 24px;
+		font-weight: 500;
+		font-family: var(--tajawal);
 
-		#heading3 {
-			font-weight: 500;
-			user-select: none;
-			margin-top: 1.3rem;
-			margin-bottom: 1rem;
-			font-size: calc(var(--csize) * 3);
+		color: ${(props) => props?.theme?.colors?.primary};
+	}
+
+	.skillType-list {
+		width: 100%;
+
+		gap: 4px;
+		display: flex;
+		list-style: none;
+		flex-direction: column;
+	}
+
+	@media only screen and (min-width: 680px) {
+		min-height: 44rem;
+		.skillsDiv {
+			gap: 2rem;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: flex-start;
 		}
 	}
 
-	@media only screen and (min-width: 700px) {
-	}
-`;
+	@media only screen and (min-width: 1024px) {
+		.skillsDiv {
+			gap: 2rem;
+			justify-content: space-between;
+		}
 
-export const Line = styled.div`
-	width: 94px;
-	height: 3px;
-	border-radius: 3px;
-	background-color: ${(props: any) => props.theme.colors.primary};
-
-	@media only screen and (min-width: 700px) {
-		width: 146px;
-		margin-left: 0;
-	}
-`;
-
-export const Skill = styled.div`
-	padding-left: 20px;
-	line-height: 25px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 10px;
-
-	p {
-		font-family: var(--montserrat);
-		width: fit-content;
-	}
-
-	@media only screen and (min-width: 700px) {
-		line-height: 36px;
+		.skillType-title {
+			width: fit-content;
+			font-size: 28px;
+		}
 	}
 `;

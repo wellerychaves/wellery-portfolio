@@ -1,12 +1,14 @@
 export default {
-    title: "dark",
+	title: "dark",
 
-    colors: {
-        primary: "#6900FF",
-        primaryD: "#4900b2",
+	colors: {
+		primary: "#BC002D",
+		primaryD: "#890020",
 
-        background: "#121212",
-        background2: "#212121",
-        text: "#FFFFFF"
-    },
+		text: "#FFFFFF",
+		darkText: "#696969",
+		mica: "#121212cc",
+		background: "#121212",
+		background2: "#171717",
+	},
 };

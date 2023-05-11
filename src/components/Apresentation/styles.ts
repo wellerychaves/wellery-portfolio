@@ -3,43 +3,47 @@ import styled from "styled-components";
 export const Container = styled.section`
 	width: 100vw;
 	height: 100vh;
-	background-color: ${(props: any) => props.theme.colors.background};
-
-	font-family: var(--montserrat);
-	font-weight: 500;
 
 	display: flex;
 	align-items: center;
+	justify-content: center;
 
-	line-height: 70px;
+	background-color: ${(props) => props?.theme?.colors?.background};
 
 	#content {
-		padding-left: 30px;
+		width: 90vw;
+		height: fit-content;
 	}
 
-	p {
-		font-size: calc(var(--csize) * 2);
+	.content_p {
+		font-weight: 400;
+		font-family: var(--montserrat);
+		font-size: calc(var(--csize) * 1.6);
 	}
 
-	#mainName {
+	.mainName {
+		font-weight: 500;
 		font-family: var(--tajawal);
 		font-size: calc(var(--csize) * 3.5);
+
+		color: ${(props) => props.theme.colors.primary};
 	}
 
-	@media screen and (min-width: 575px) {
-		width: 60vw;
-
+	// Desktop
+	@media screen and (min-width: 745px) {
 		#content {
+			max-width: 1120px;
 			margin: 0 auto;
+			gap: 8px;
 		}
 
-		p {
-			font-size: calc(var(--csize) * 2.5);
+		.content_p {
+			font-size: calc(var(--csize) * 3.2);
 		}
 
-		#mainName {
+		.mainName {
 			font-family: var(--tajawal);
-			font-size: calc(var(--csize) * 5);
+			font-size: calc(var(--csize) * 6.4);
 		}
 	}
 `;

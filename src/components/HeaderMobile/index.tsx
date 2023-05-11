@@ -12,7 +12,7 @@ const HeaderMobile = () => {
 		<Container>
 			<a className="logo">ツ</a>
 			<label htmlFor="check" className="bar">
-				<input onClick={handleClick} id="check" type="checkbox"></input>
+				<input  onClick={handleClick} id="check" type="checkbox"></input>
 
 				<span className="top"></span>
 				<span className="middle"></span>

@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+/* 
+export const tools = {
+	Yarn: "yarni.com",
+};
+
+export const studing = {
+	Bun: "bundaum",
+};
+
+=======
+>>>>>>> main
 const skills = {
 	techs: [
 		"GIT",
@@ -34,4 +46,16 @@ const skills = {
 	studing: ["Bun", "AWS", "Django", "MongoDB", "Cucumber"],
 };
 
+<<<<<<< HEAD
+const skillsIcons = {
+	techs: {
+		javascript:
+			"https://icongr.am/devicon/javascript-original.svg?size=64&color=currentColor",
+		react: "https://icongr.am/devicon/react-original.svg?size=64&color=currentColor",
+	},
+};
+
+*/
+=======
 export default skills;
+>>>>>>> main

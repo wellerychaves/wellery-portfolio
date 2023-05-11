@@ -1,32 +1,51 @@
-import React from "react";
-import { Container, Line, Skill } from "./styles";
-import skill from "../../utils/skills";
+import { useContext, forwardRef, Ref } from "react";
+import { TechsContext } from "../../providers/techs";
+import { Container } from "./styles";
+import Title from "../Title";
 
-const Skills = () => {
-	const techs = skill.techs.map((skill, index) => <p key={index}>{skill}</p>);
-	const tools = skill.tools.map((skill, index) => <p key={index}>{skill}</p>);
-	const studing = skill.studing.map((skill, index) => (
-		<p key={index}>{skill}</p>
-	));
+const Skills = (_: any, ref: Ref<HTMLDivElement>) => {
+	const { programmingLanguages, backEndDev, frontEndDev, softwareAndTools } =
+		useContext(TechsContext);
 
 	return (
-		<Container id="skills">
-			<div id="content">
-				<div id="title">
-					<h2>My Skills</h2>
-					<Line />
+		<Container ref={ref}>
+			<Title title="My Skills" />
+			<div className="skillsDiv">
+				<div className="skillType">
+					<h3 className="skillType-title">Front End development</h3>
+					<ul className="skillType-list">
+						{frontEndDev.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
 				</div>
-				<div id="skills">
-					<h3 id="heading3">Techs</h3>
-					<Skill id="techs">{techs}</Skill>
-					<h3 id="heading3">Tools</h3>
-					<Skill id="tools">{tools}</Skill>
-					<h3 id="heading3">Studing</h3>
-					<Skill id="studing">{studing}</Skill>
+				<div className="skillType">
+					<h3 className="skillType-title">Back End development</h3>
+					<ul className="skillType-list">
+						{backEndDev.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+				</div>
+				<div className="skillType">
+					<h3 className="skillType-title">Software & Tools</h3>
+					<ul className="skillType-list">
+						{softwareAndTools.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+				</div>
+				<div className="skillType">
+					<h3 className="skillType-title">Programming languages</h3>
+					<ul className="skillType-list">
+						{programmingLanguages.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
 				</div>
 			</div>
 		</Container>
 	);
 };
 
-export default Skills;
+export default forwardRef(Skills);
