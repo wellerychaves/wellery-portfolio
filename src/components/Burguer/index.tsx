@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledBurguer } from "./styles";
 
 const Burguer = ({ prop }: any) => {

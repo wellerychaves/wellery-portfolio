@@ -12,7 +12,7 @@ const PortifolioCard = () => {
 	return (
 		<Container>
 			<Figure>
-				<div>SOON</div>
+				<div>soon</div>
 			</Figure>
 			<CardContent>
 				<div className="cardContent_item">

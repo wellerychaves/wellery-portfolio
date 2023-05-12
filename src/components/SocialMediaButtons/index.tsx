@@ -13,6 +13,7 @@ const SocialMediaButtons = () => {
 		<Container>
 			<div className="buttonDiv">
 				<a
+					title="Linkedin Wellery Chaves"
 					rel="noopener"
 					className="iconButton"
 					href="https://www.linkedin.com/in/wellerychaves/"
@@ -32,6 +33,7 @@ const SocialMediaButtons = () => {
 			</div>
 			<div className="buttonDiv">
 				<a
+					title="GitHub Wellery Chaves"
 					rel="noopener"
 					className="iconButton"
 					href="https://github.com/wellerychaves"
@@ -51,6 +53,7 @@ const SocialMediaButtons = () => {
 			</div>
 			<div className="buttonDiv">
 				<a
+					title="Telegram Wellery Chaves"
 					rel="noopener"
 					className="iconButton"
 					href="https://t.me/WelleryC"
@@ -70,6 +73,7 @@ const SocialMediaButtons = () => {
 			</div>
 			<div className="buttonDiv">
 				<a
+					title="WhatsApp Wellery Chaves"
 					rel="noopener"
 					className="iconButton"
 					href="https://wa.me/5583982251204"
@@ -89,6 +93,7 @@ const SocialMediaButtons = () => {
 			</div>
 			<div className="buttonDiv">
 				<a
+					title="E-Mail Wellery Chaves"
 					className="iconButton"
 					href="mailto:wellerypro@outlook.com"
 					target="_blank"

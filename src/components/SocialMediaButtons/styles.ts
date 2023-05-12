@@ -7,13 +7,6 @@ export const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
 
-	/* 	width: max-content;
-	max-width: 500px;
-	display: flex;
-	margin: 50px auto;
-	justify-content: space-around;
-	gap: 18px; */
-
 	.buttonDiv {
 		gap: 20px;
 		display: flex;
