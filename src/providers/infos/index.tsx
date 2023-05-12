@@ -5,9 +5,18 @@ type ProviderProps = {
 };
 
 type InfosItem = {
-	[key: string]: string;
+	Name?: string;
+	Age?: string;
+	Experience?: string;
 };
-type Infos = { infos: InfosItem[]; infos2: InfosItem[] };
+
+type InfosItem2 = {
+	Linkedin?: string;
+	GitHub?: string;
+	Phone?: string;
+};
+
+type Infos = { infos: InfosItem[]; infos2: InfosItem2[] };
 
 export const InfosContext = createContext<Infos>({ infos: [], infos2: [] });
 
