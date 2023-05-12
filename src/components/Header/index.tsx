@@ -24,7 +24,8 @@ const Header: React.FC<HeaderProps> = ({
 	/* scrollTo functions */
 	const adiantaVida = (ref: React.RefObject<HTMLElement>) => {
 		let windowWidth = 0;
-		window.innerWidth <= 768 ? (windowWidth = 60) : 80;
+		window.innerWidth <= 768 ? (windowWidth = 60) : (windowWidth = 80);
+
 		if (ref.current !== null) {
 			return (
 				ref.current.getBoundingClientRect().top +
@@ -50,6 +51,7 @@ const Header: React.FC<HeaderProps> = ({
 				behavior: "smooth",
 			});
 		}
+		handleClick();
 	};
 
 	return (
