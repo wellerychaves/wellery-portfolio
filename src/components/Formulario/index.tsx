@@ -51,7 +51,7 @@ const Formulario = () => {
 					name="user_name"
 					className="form__field"
 				/>
-				<label for="Name" className="form__label">
+				<label htmlFor="Name" className="form__label">
 					Name
 				</label>
 			</div>
@@ -63,7 +63,7 @@ const Formulario = () => {
 					name="user_email"
 					className="form__field"
 				/>
-				<label for="Email" className="form__label">
+				<label htmlFor="Email" className="form__label">
 					Email
 				</label>
 			</div>
@@ -74,7 +74,7 @@ const Formulario = () => {
 					name="message"
 					className="form__field from_text_area"
 				/>
-				<label for="Message" className="form__label">
+				<label htmlFor="Message" className="form__label">
 					Message
 				</label>
 			</div>
