@@ -23,13 +23,12 @@ export const InfosContext = createContext<Infos>({ infos: [], infos2: [] });
 export const InfosProvider = ({ children }: ProviderProps) => {
 	const infos = [
 		{ Name: "Wellery T. Chaves" },
-		{ Age: "22" },
-		{ Experience: "1 Year" },
+		{ Age: "23" },
+		{ Experience: "2 Years" },
 	];
 	const infos2 = [
 		{ Linkedin: "Wellery Chaves" },
 		{ GitHub: "wellerychaves" },
-		{ Phone: "+55 83 9 8225-1204" },
 	];
 	return (
 		<InfosContext.Provider value={{ infos, infos2 }}>
