@@ -1,6 +1,6 @@
 import {
-	FaLinkedinIn,
 	FaGithub,
+	FaLinkedinIn,
 	FaTelegramPlane,
 	FaWhatsapp,
 } from "react-icons/fa";
@@ -76,7 +76,7 @@ const SocialMediaButtons = () => {
 					title="WhatsApp Wellery Chaves"
 					rel="noopener"
 					className="iconButton"
-					href="https://wa.me/5583982251204"
+					href="https://wa.me/5583989163841"
 					target="_blank"
 					type="button"
 				>
@@ -85,7 +85,7 @@ const SocialMediaButtons = () => {
 				<a
 					rel="noopener"
 					className="buttonText"
-					href="https://wa.me/5583982251204"
+					href="https://wa.me/5583989163841"
 					target="_blank"
 				>
 					Whatsapp
@@ -114,3 +114,4 @@ const SocialMediaButtons = () => {
 };
 
 export default SocialMediaButtons;
+
