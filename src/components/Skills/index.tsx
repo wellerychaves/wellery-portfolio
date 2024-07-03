@@ -1,7 +1,7 @@
-import { useContext, forwardRef, Ref } from "react";
+import { Ref, forwardRef, useContext } from "react";
 import { TechsContext } from "../../providers/techs";
-import { Container } from "./styles";
 import Title from "../Title";
+import { Container } from "./styles";
 
 const Skills = (_: any, ref: Ref<HTMLDivElement>) => {
 	const { programmingLanguages, backEndDev, frontEndDev, softwareAndTools } =
@@ -9,7 +9,7 @@ const Skills = (_: any, ref: Ref<HTMLDivElement>) => {
 
 	return (
 		<Container ref={ref}>
-			<Title title="My Skills" />
+			<Title title="My Stacks" />
 			<div className="skillsDiv">
 				<div className="skillType">
 					<h3 className="skillType-title">Front End development</h3>
@@ -49,3 +49,4 @@ const Skills = (_: any, ref: Ref<HTMLDivElement>) => {
 };
 
 export default forwardRef(Skills);
+
