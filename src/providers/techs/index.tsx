@@ -28,6 +28,7 @@ export const TechsProvider = ({ children }: ProviderProps) => {
 		"Styled Components",
 		"React",
 		"Redux",
+		"TailwindCSS"
 	];
 	const backEndDev = [
 		"Django",
@@ -43,7 +44,7 @@ export const TechsProvider = ({ children }: ProviderProps) => {
 		"Figma",
 		"Git",
 		"GitHub",
-		"Insomnia",
+		"HTTPie",
 		"NPM",
 		"Obsidian",
 		"Trello",
