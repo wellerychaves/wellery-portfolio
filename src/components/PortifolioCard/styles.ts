@@ -56,11 +56,14 @@ export const CardContent = styled.div`
 `;
 
 export const DescriptionP = styled.p`
-	font-size: calc(var(--csize) * 1.2);
+	color: #ced4da;
 	text-align: justify;
+	font-size: calc(var(--csize) * 1.2);
 `;
 
 export const TechsP = styled.p`
+	color: #ced4da;
+	text-align: justify;
 	font-size: calc(var(--csize) * 1.2);
 `;
 
@@ -75,10 +78,10 @@ export const ButtonsDiv = styled.div`
 
 	button {
 		max-height: 2rem;
-		
+
 		font-weight: 400;
 		font-size: 0.75rem;
-		
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
