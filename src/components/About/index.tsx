@@ -43,11 +43,7 @@ const About = (_: any, ref: Ref<HTMLDivElement>) => {
 					</StyledA>
 				</ContentRight>
 				<ImageBox>
-					<img
-						id="image"
-						src={wellery}
-						alt="Wellery Chaves profile photo"
-					/>
+					<img id="image" src={wellery} alt="Wellery Chaves profile photo" />
 				</ImageBox>
 			</div>
 		</Container>
@@ -55,4 +51,3 @@ const About = (_: any, ref: Ref<HTMLDivElement>) => {
 };
 
 export default forwardRef(About);
-

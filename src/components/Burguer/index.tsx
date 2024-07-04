@@ -1,7 +1,7 @@
 import { StyledBurguer } from "./styles";
 
 const Burguer = ({ prop }: any) => {
-	console.log()
+	console.log();
 	return (
 		<StyledBurguer onClick={prop}>
 			<div />

@@ -8,7 +8,7 @@ export const Button = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
 	.logo {
 		padding: 0;
 		max-width: 48px;

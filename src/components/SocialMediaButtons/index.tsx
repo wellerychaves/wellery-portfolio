@@ -1,9 +1,4 @@
-import {
-	FaGithub,
-	FaLinkedinIn,
-	FaTelegramPlane,
-	FaWhatsapp,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
 import { Container } from "./styles";
@@ -42,12 +37,7 @@ const SocialMediaButtons = () => {
 				>
 					<FaGithub />
 				</a>
-				<a
-					rel="noopener"
-					className="buttonText"
-					href="https://github.com/wellerychaves"
-					target="_blank"
-				>
+				<a rel="noopener" className="buttonText" href="https://github.com/wellerychaves" target="_blank">
 					GitHub
 				</a>
 			</div>
@@ -62,12 +52,7 @@ const SocialMediaButtons = () => {
 				>
 					<FaTelegramPlane />
 				</a>
-				<a
-					rel="noopener"
-					className="buttonText"
-					href="https://t.me/WelleryC"
-					target="_blank"
-				>
+				<a rel="noopener" className="buttonText" href="https://t.me/WelleryC" target="_blank">
 					Telegram
 				</a>
 			</div>
@@ -82,12 +67,7 @@ const SocialMediaButtons = () => {
 				>
 					<FaWhatsapp />
 				</a>
-				<a
-					rel="noopener"
-					className="buttonText"
-					href="https://wa.me/5583989163841"
-					target="_blank"
-				>
+				<a rel="noopener" className="buttonText" href="https://wa.me/5583989163841" target="_blank">
 					Whatsapp
 				</a>
 			</div>
@@ -101,11 +81,7 @@ const SocialMediaButtons = () => {
 				>
 					<HiOutlineMail />
 				</a>
-				<a
-					className="buttonText"
-					href="mailto:wellerypro@outlook.com"
-					target="_blank"
-				>
+				<a className="buttonText" href="mailto:wellerypro@outlook.com" target="_blank">
 					E-Mail
 				</a>
 			</div>
@@ -114,4 +90,3 @@ const SocialMediaButtons = () => {
 };
 
 export default SocialMediaButtons;
-

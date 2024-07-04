@@ -2,20 +2,15 @@ import { useState } from "react";
 
 import { DesktopHeader, MobileHeader } from "./styles";
 
-import Logo from "../Logo";
 import { HeaderProps } from "../../@types/types";
 import Burguer from "../Burguer";
+import Logo from "../Logo";
 
 interface ElementWithBoundingRect extends React.RefObject<HTMLElement> {
 	getBoundingClientRect(): DOMRect;
 }
 
-const Header: React.FC<HeaderProps> = ({
-	aboutRef,
-	techsRef,
-	portfolioRef,
-	contactRef,
-}) => {
+const Header: React.FC<HeaderProps> = ({ aboutRef, techsRef, portfolioRef, contactRef }) => {
 	const [isChecked, setIsChecked] = useState(false);
 	const handleClick = () => {
 		setIsChecked(!isChecked);
@@ -27,11 +22,7 @@ const Header: React.FC<HeaderProps> = ({
 		window.innerWidth <= 768 ? (windowWidth = 60) : (windowWidth = 80);
 
 		if (ref.current !== null) {
-			return (
-				ref.current.getBoundingClientRect().top +
-				window.pageYOffset -
-				windowWidth
-			);
+			return ref.current.getBoundingClientRect().top + window.pageYOffset - windowWidth;
 		}
 	};
 
@@ -43,12 +34,12 @@ const Header: React.FC<HeaderProps> = ({
 		} else if (section === "portifolio") {
 			window.scrollTo({
 				top: adiantaVida(portfolioRef),
-				behavior: "smooth",
+				behavior: "smooth"
 			});
 		} else if (section === "contact") {
 			window.scrollTo({
 				top: adiantaVida(contactRef),
-				behavior: "smooth",
+				behavior: "smooth"
 			});
 		}
 		handleClick();
@@ -67,20 +58,12 @@ const Header: React.FC<HeaderProps> = ({
 					<nav className="navBar">
 						<ul>
 							<li className="navBar_li">
-								<button
-									className="buttonReset"
-									type="button"
-									onClick={() => scrollToSection("about")}
-								>
+								<button className="buttonReset" type="button" onClick={() => scrollToSection("about")}>
 									About Me
 								</button>
 							</li>
 							<li className="navBar_li">
-								<button
-									className="buttonReset"
-									type="button"
-									onClick={() => scrollToSection("techs")}
-								>
+								<button className="buttonReset" type="button" onClick={() => scrollToSection("techs")}>
 									Techs
 								</button>
 							</li>
@@ -88,9 +71,7 @@ const Header: React.FC<HeaderProps> = ({
 								<button
 									className="buttonReset"
 									type="button"
-									onClick={() =>
-										scrollToSection("portifolio")
-									}
+									onClick={() => scrollToSection("portifolio")}
 								>
 									Portifolio
 								</button>
@@ -115,20 +96,12 @@ const Header: React.FC<HeaderProps> = ({
 					<nav className="navBar">
 						<ul className="navBar_ul">
 							<li className="navBar_li">
-								<button
-									type="button"
-									className="buttonReset"
-									onClick={() => scrollToSection("about")}
-								>
+								<button type="button" className="buttonReset" onClick={() => scrollToSection("about")}>
 									About Me
 								</button>
 							</li>
 							<li>
-								<button
-									type="button"
-									className="buttonReset"
-									onClick={() => scrollToSection("techs")}
-								>
+								<button type="button" className="buttonReset" onClick={() => scrollToSection("techs")}>
 									Techs
 								</button>
 							</li>
@@ -136,9 +109,7 @@ const Header: React.FC<HeaderProps> = ({
 								<button
 									type="button"
 									className="buttonReset"
-									onClick={() =>
-										scrollToSection("portifolio")
-									}
+									onClick={() => scrollToSection("portifolio")}
 								>
 									Portifolio
 								</button>

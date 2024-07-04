@@ -4,8 +4,7 @@ import Title from "../Title";
 import { Container } from "./styles";
 
 const Skills = (_: any, ref: Ref<HTMLDivElement>) => {
-	const { programmingLanguages, backEndDev, frontEndDev, softwareAndTools } =
-		useContext(TechsContext);
+	const { programmingLanguages, backEndDev, frontEndDev, softwareAndTools } = useContext(TechsContext);
 
 	return (
 		<Container ref={ref}>
@@ -49,4 +48,3 @@ const Skills = (_: any, ref: Ref<HTMLDivElement>) => {
 };
 
 export default forwardRef(Skills);
-

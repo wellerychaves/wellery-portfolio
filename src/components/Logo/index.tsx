@@ -2,8 +2,7 @@ import KyotoFlag from "../../assets/images/Kyoto_flag.svg";
 import { Button } from "./styles";
 
 const Logo = () => {
-	const handleLogoClick = () =>
-		window.scrollTo({ top: 0, behavior: "smooth" });
+	const handleLogoClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 	return (
 		<>

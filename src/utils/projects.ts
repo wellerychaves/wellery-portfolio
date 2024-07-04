@@ -1,7 +1,7 @@
 const projects = {
 	title: "titulo",
 	description: "",
-	techs: [],
+	techs: []
 };
 
 export default projects;

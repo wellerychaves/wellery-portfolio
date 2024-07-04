@@ -1,8 +1,8 @@
 import { forwardRef, Ref } from "react";
 
 import PortifolioCard from "../PortifolioCard";
-import { Container } from "./styles";
 import Title from "../Title";
+import { Container } from "./styles";
 
 const Portfolio = (_: any, ref: Ref<HTMLDivElement>) => {
 	return (

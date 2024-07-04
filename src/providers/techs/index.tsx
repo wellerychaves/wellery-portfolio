@@ -15,31 +15,13 @@ export const TechsContext = createContext<Techs>({
 	programmingLanguages: [],
 	frontEndDev: [],
 	backEndDev: [],
-	softwareAndTools: [],
+	softwareAndTools: []
 });
 
 export const TechsProvider = ({ children }: ProviderProps) => {
 	const programmingLanguages = ["JavaScript", "Python", "TypeScript"];
-	const frontEndDev = [
-		"Axios",
-		"CSS3",
-		"ContextAPI",
-		"HTML5",
-		"Styled Components",
-		"React",
-		"Redux",
-		"TailwindCSS"
-	];
-	const backEndDev = [
-		"Django",
-		"Docker",
-		"Express",
-		"Jest",
-		"JWT",
-		"NodeJS",
-		"PostgreSQL",
-		"Rest Framework",
-	];
+	const frontEndDev = ["Axios", "CSS3", "ContextAPI", "HTML5", "Styled Components", "React", "Redux", "TailwindCSS"];
+	const backEndDev = ["Django", "Docker", "Express", "Jest", "JWT", "NodeJS", "PostgreSQL", "Rest Framework"];
 	const softwareAndTools = [
 		"Figma",
 		"Git",
@@ -52,7 +34,7 @@ export const TechsProvider = ({ children }: ProviderProps) => {
 		"Vite",
 		"Windows Terminal",
 		"WSL2",
-		"Yarn",
+		"Yarn"
 	];
 
 	return (
@@ -61,7 +43,7 @@ export const TechsProvider = ({ children }: ProviderProps) => {
 				programmingLanguages,
 				frontEndDev,
 				backEndDev,
-				softwareAndTools,
+				softwareAndTools
 			}}
 		>
 			{children}

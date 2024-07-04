@@ -1,12 +1,5 @@
 import Button from "../Button";
-import {
-	ButtonsDiv,
-	Container,
-	CardContent,
-	DescriptionP,
-	Figure,
-	TechsP,
-} from "./styles";
+import { ButtonsDiv, CardContent, Container, DescriptionP, Figure, TechsP } from "./styles";
 
 const PortifolioCard = () => {
 	return (
@@ -18,17 +11,15 @@ const PortifolioCard = () => {
 				<div className="cardContent_item">
 					<h3>Title</h3>
 					<DescriptionP>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Eaque ducimus nobis sint eius voluptate rem harum autem
-						quia tenetur error nostrum eos numquam accusamus quos
-						voluptas itaque, iste ad quasi?
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus nobis sint eius voluptate
+						rem harum autem quia tenetur error nostrum eos numquam accusamus quos voluptas itaque, iste ad
+						quasi?
 					</DescriptionP>
 				</div>
 				<div className="cardContent_item">
 					<h3>Techs</h3>
 					<TechsP>
-						React, Typescript, React-router-dom, MUI,
-						React-hook-form, Yup, Axios, NodeJS, Express, JWT,
+						React, Typescript, React-router-dom, MUI, React-hook-form, Yup, Axios, NodeJS, Express, JWT,
 						TypeORM, PostgreSQL, Docker
 					</TechsP>
 				</div>

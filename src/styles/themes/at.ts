@@ -9,6 +9,6 @@ export default {
 		darkText: "#9E7F86",
 		mica: "#1e0707cc",
 		background: "#1E0707",
-		background2: "#31080a",
-	},
+		background2: "#31080a"
+	}
 };

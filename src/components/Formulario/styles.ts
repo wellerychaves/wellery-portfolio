@@ -73,7 +73,7 @@ export const Form = styled.form`
 		max-width: 25rem;
 		align-items: flex-start;
 	}
-	
+
 	@media screen and (min-width: 900px) {
 		max-width: 28.5rem;
 		align-items: flex-start;
