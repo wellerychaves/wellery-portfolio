@@ -51,7 +51,7 @@ const App: React.FC = () => {
 				<Apresentation />
 				<About ref={aboutRef} />
 				<Skills ref={techsRef} />
-				<Portfolio ref={portfolioRef} />
+				{/*<Portfolio ref={portfolioRef} />*/}
 				<Contact ref={contactRef} />
 				<Footer toggleTheme={toggleTheme} />
 			</ThemeProvider>
