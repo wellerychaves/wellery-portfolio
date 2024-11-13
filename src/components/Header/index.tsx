@@ -105,7 +105,7 @@ const Header: React.FC<HeaderProps> = ({ aboutRef, techsRef, portfolioRef, conta
 									Techs
 								</button>
 							</li>
-							<li>
+							{/*<li>
 								<button
 									type="button"
 									className="buttonReset"
@@ -113,7 +113,7 @@ const Header: React.FC<HeaderProps> = ({ aboutRef, techsRef, portfolioRef, conta
 								>
 									Portifolio
 								</button>
-							</li>
+							</li>*/}
 							<li>
 								<button
 									type="button"
