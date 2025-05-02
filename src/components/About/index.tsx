@@ -1,4 +1,4 @@
-import { Ref, forwardRef, useContext } from "react";
+import { type Ref, forwardRef, useContext } from "react";
 import wellery from "../../assets/images/wellery.jpg";
 import { InfosContext } from "../../providers/infos";
 import curriculum from "../../utils/links";
@@ -19,7 +19,7 @@ const About = (_: any, ref: Ref<HTMLDivElement>) => {
 					<InfoBox className="personal-info">
 						<div className="row">
 							{infos.map((item: any, index: number) => (
-								<div key={index} className="info">
+								<div key={index.toString()} className="info">
 									<p>
 										<span>{Object.keys(item)}: </span>
 										{item[Object.keys(item)[0]]}
@@ -29,7 +29,7 @@ const About = (_: any, ref: Ref<HTMLDivElement>) => {
 						</div>
 						<div className="row">
 							{infos2.map((item: any, index: number) => (
-								<div key={index} className="info">
+								<div key={index.toString()} className="info">
 									<p>
 										<span>{Object.keys(item)}: </span>
 										{item[Object.keys(item)[0]]}
@@ -43,7 +43,7 @@ const About = (_: any, ref: Ref<HTMLDivElement>) => {
 					</StyledA>
 				</ContentRight>
 				<ImageBox>
-					<img id="image" src={wellery} alt="Wellery Chaves profile photo" />
+					<img id="image" src={wellery} alt="Wellery Chaves" />
 				</ImageBox>
 			</div>
 		</Container>

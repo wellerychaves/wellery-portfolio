@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { DesktopHeader, MobileHeader } from "./styles";
 
-import { HeaderProps } from "../../@types/types";
+import type { HeaderProps } from "../../@types/types";
 import Burguer from "../Burguer";
 import Logo from "../Logo";
 
@@ -18,8 +18,7 @@ const Header: React.FC<HeaderProps> = ({ aboutRef, techsRef, portfolioRef, conta
 
 	/* scrollTo functions */
 	const adiantaVida = (ref: React.RefObject<HTMLElement>) => {
-		let windowWidth = 0;
-		window.innerWidth <= 768 ? (windowWidth = 60) : (windowWidth = 80);
+		const windowWidth = window.innerWidth <= 768 ? 60 : 80;
 
 		if (ref.current !== null) {
 			return ref.current.getBoundingClientRect().top + window.pageYOffset - windowWidth;
