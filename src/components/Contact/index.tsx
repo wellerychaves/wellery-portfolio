@@ -1,4 +1,4 @@
-import { forwardRef, Ref } from "react";
+import { type Ref, forwardRef } from "react";
 
 import { IconContext } from "react-icons";
 

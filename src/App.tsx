@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import type React from "react";
+import { useRef } from "react";
 import { ToastContainer } from "react-toastify";
-import { DefaultTheme, ThemeProvider } from "styled-components";
+import { type DefaultTheme, ThemeProvider } from "styled-components";
 
 import "react-toastify/dist/ReactToastify.css";
 import About from "./components/About";

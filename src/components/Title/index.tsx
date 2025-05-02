@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import { Container, Span } from "./styles";
 
 type TitleProps = {

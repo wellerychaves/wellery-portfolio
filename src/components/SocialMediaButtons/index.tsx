@@ -9,7 +9,7 @@ const SocialMediaButtons = () => {
 			<div className="buttonDiv">
 				<a
 					title="Linkedin Wellery Chaves"
-					rel="noopener"
+					rel="noreferrer noopener"
 					className="iconButton"
 					href="https://www.linkedin.com/in/wellerychaves/"
 					target="_blank"
@@ -18,7 +18,7 @@ const SocialMediaButtons = () => {
 					<FaLinkedinIn />
 				</a>
 				<a
-					rel="noopener"
+					rel="noreferrer noopener"
 					className="buttonText"
 					href="https://www.linkedin.com/in/wellerychaves/"
 					target="_blank"
@@ -29,7 +29,7 @@ const SocialMediaButtons = () => {
 			<div className="buttonDiv">
 				<a
 					title="GitHub Wellery Chaves"
-					rel="noopener"
+					rel="noreferrer noopener"
 					className="iconButton"
 					href="https://github.com/wellerychaves"
 					target="_blank"
@@ -37,14 +37,19 @@ const SocialMediaButtons = () => {
 				>
 					<FaGithub />
 				</a>
-				<a rel="noopener" className="buttonText" href="https://github.com/wellerychaves" target="_blank">
+				<a
+					rel="noreferrer noopener"
+					className="buttonText"
+					href="https://github.com/wellerychaves"
+					target="_blank"
+				>
 					GitHub
 				</a>
 			</div>
 			<div className="buttonDiv">
 				<a
 					title="Telegram Wellery Chaves"
-					rel="noopener"
+					rel="noreferrer noopener"
 					className="iconButton"
 					href="https://t.me/WelleryC"
 					target="_blank"
@@ -52,14 +57,14 @@ const SocialMediaButtons = () => {
 				>
 					<FaTelegramPlane />
 				</a>
-				<a rel="noopener" className="buttonText" href="https://t.me/WelleryC" target="_blank">
+				<a rel="noreferrer noopener" className="buttonText" href="https://t.me/WelleryC" target="_blank">
 					Telegram
 				</a>
 			</div>
 			<div className="buttonDiv">
 				<a
 					title="WhatsApp Wellery Chaves"
-					rel="noopener"
+					rel="noreferrer noopener"
 					className="iconButton"
 					href="https://wa.me/5583989163841"
 					target="_blank"
@@ -67,7 +72,7 @@ const SocialMediaButtons = () => {
 				>
 					<FaWhatsapp />
 				</a>
-				<a rel="noopener" className="buttonText" href="https://wa.me/5583989163841" target="_blank">
+				<a rel="noreferrer noopener" className="buttonText" href="https://wa.me/5583989163841" target="_blank">
 					Whatsapp
 				</a>
 			</div>
@@ -78,10 +83,11 @@ const SocialMediaButtons = () => {
 					href="mailto:wellerypro@outlook.com"
 					target="_blank"
 					type="button"
+					rel="noreferrer"
 				>
 					<HiOutlineMail />
 				</a>
-				<a className="buttonText" href="mailto:wellerypro@outlook.com" target="_blank">
+				<a className="buttonText" href="mailto:wellerypro@outlook.com" target="_blank" rel="noreferrer">
 					E-Mail
 				</a>
 			</div>
