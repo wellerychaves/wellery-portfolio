@@ -5,11 +5,9 @@ const Logo = () => {
 	const handleLogoClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 	return (
-		<>
-			<Button onClick={handleLogoClick} type="button">
-				<img className="logo" src={KyotoFlag} alt="PageLogo" />
-			</Button>
-		</>
+		<Button onClick={handleLogoClick} type="button">
+			<img className="logo" src={KyotoFlag} alt="PageLogo" />
+		</Button>
 	);
 };
 

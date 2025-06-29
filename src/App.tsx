@@ -9,7 +9,6 @@ import Apresentation from "./components/Apresentation";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 import GlobalStyle from "./styles/global";
 import at from "./styles/themes/at";
@@ -29,34 +28,32 @@ const App: React.FC = () => {
 	const contactRef = useRef(null);
 
 	return (
-		<>
-			<ThemeProvider theme={theme}>
-				<GlobalStyle />
-				<ToastContainer
-					position="top-right"
-					autoClose={5000}
-					hideProgressBar
-					newestOnTop={false}
-					closeOnClick
-					rtl={false}
-					pauseOnFocusLoss
-					draggable
-					pauseOnHover={false}
-					theme="dark"
-					toastStyle={{
-						backgroundColor: "rgba(0,0,0,1)",
-						borderRadius: "3px"
-					}}
-				/>
-				<Header aboutRef={aboutRef} techsRef={techsRef} portfolioRef={portfolioRef} contactRef={contactRef} />
-				<Apresentation />
-				<About ref={aboutRef} />
-				<Skills ref={techsRef} />
-				{/*<Portfolio ref={portfolioRef} />*/}
-				<Contact ref={contactRef} />
-				<Footer toggleTheme={toggleTheme} />
-			</ThemeProvider>
-		</>
+		<ThemeProvider theme={theme}>
+			<GlobalStyle />
+			<ToastContainer
+				position="top-right"
+				autoClose={5000}
+				hideProgressBar
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover={false}
+				theme="dark"
+				toastStyle={{
+					backgroundColor: "rgba(0,0,0,1)",
+					borderRadius: "3px"
+				}}
+			/>
+			<Header aboutRef={aboutRef} techsRef={techsRef} portfolioRef={portfolioRef} contactRef={contactRef} />
+			<Apresentation />
+			<About ref={aboutRef} />
+			<Skills ref={techsRef} />
+			{/*<Portfolio ref={portfolioRef} />*/}
+			<Contact ref={contactRef} />
+			<Footer toggleTheme={toggleTheme} />
+		</ThemeProvider>
 	);
 };
 
