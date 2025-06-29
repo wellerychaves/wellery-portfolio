@@ -1,15 +1,14 @@
-import { toast } from "react-toastify";
-
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 import { Form, SubmitButton } from "./styles";
 
 const Formulario = () => {
-	const sendEmail = (evt: any) => {
+	const sendEmail = (evt: React.FormEvent<HTMLFormElement>) => {
 		evt.preventDefault();
 
-		emailjs.sendForm("service_108055", "template_52rw9bf", evt.target, "ZmWaCznNTG3x7kLSG").then(
-			(result) => {
+		emailjs.sendForm("service_108055", "template_52rw9bf", evt.currentTarget, "ZmWaCznNTG3x7kLSG").then(
+			(_result) => {
 				toast.success("Email successfully sent", {
 					position: "top-right",
 					autoClose: 3499,
@@ -20,7 +19,7 @@ const Formulario = () => {
 					progress: undefined
 				});
 			},
-			(error) => {
+			(_error) => {
 				toast.error("Something went wrong", {
 					position: "top-right",
 					autoClose: 3499,
@@ -32,7 +31,7 @@ const Formulario = () => {
 				});
 			}
 		);
-		evt.target.reset();
+		(evt.target as HTMLFormElement).reset();
 	};
 	return (
 		<Form autoComplete="off" onSubmit={(evt) => sendEmail(evt)}>
