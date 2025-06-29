@@ -1,14 +1,8 @@
 import { useState } from "react";
-
-import { DesktopHeader, MobileHeader } from "./styles";
-
 import type { HeaderProps } from "../../@types/types";
 import Burguer from "../Burguer";
 import Logo from "../Logo";
-
-interface ElementWithBoundingRect extends React.RefObject<HTMLElement> {
-	getBoundingClientRect(): DOMRect;
-}
+import { DesktopHeader, MobileHeader } from "./styles";
 
 const Header: React.FC<HeaderProps> = ({ aboutRef, techsRef, portfolioRef, contactRef }) => {
 	const [isChecked, setIsChecked] = useState(false);
