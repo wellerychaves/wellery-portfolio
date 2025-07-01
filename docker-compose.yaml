@@ -1,0 +1,10 @@
+services:
+  wellery-portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: wellery-portfolio
+    container_name: wellery-portfolio-container
+    ports:
+      - "8080:80"
+    restart: unless-stopped

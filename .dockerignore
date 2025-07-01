@@ -1,0 +1,22 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+build
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Environment variables
+.env*
+
+# IDE and OS files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
