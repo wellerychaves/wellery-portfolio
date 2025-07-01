@@ -6,5 +6,5 @@ services:
     image: wellery-portfolio
     container_name: wellery-portfolio-container
     ports:
-      - "8080:80"
+      - "80:80"
     restart: unless-stopped
