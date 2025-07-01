@@ -6,5 +6,9 @@ services:
     image: wellery-portfolio
     container_name: wellery-portfolio-container
     ports:
-      - "80:80"
+      - "80:80"      
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - /opt/certbot/www:/var/www/certbot
     restart: unless-stopped
