@@ -1,14 +1,8 @@
 services:
-  wellery-portfolio:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: wellery-portfolio
-    container_name: wellery-portfolio-container
-    ports:
-      - "80:80"      
-      - "443:443"
-    volumes:
-      - /etc/letsencrypt:/etc/letsencrypt:ro
-      - /opt/certbot/www:/var/www/certbot
+  wellery_portfolio:
+    build: .
+    container_name: wellery_portfolio
     restart: unless-stopped
+    networks: [central_proxy_net]
+networks:
+  central_proxy_net: { external: true }
