@@ -1,0 +1,8 @@
+services:
+  wellery_portfolio:
+    build: .
+    container_name: wellery_portfolio
+    restart: unless-stopped
+    networks: [central_proxy_net]
+networks:
+  central_proxy_net: { external: true }
