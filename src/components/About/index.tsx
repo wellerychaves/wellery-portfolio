@@ -7,7 +7,7 @@ import { Container, ContentRight, ImageBox, InfoBox, StyledA } from "./styles";
 
 const About = (_: unknown, ref: Ref<HTMLDivElement>) => {
 	const apresentation =
-		"My name is Wellery Chaves. I'm a Full Stack Developer based in Paraíba, Brazil, and I'm very passionate in my work. With more than a year experience as a professional Full Stack Developer, I have acquired some skills necessary to develop great codes and applications.";
+		"Software Engineering student and Full Stack Developer building robust and scalable web applications with React and TypeScript. My work prioritizes high-quality code, performance, and a user-centric approach focused on accessibility.";
 	const { infos, infos2 } = useContext(InfosContext);
 
 	return (
