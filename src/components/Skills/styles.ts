@@ -26,6 +26,7 @@ export const Container = styled.section`
 		justify-content: space-around;
 		box-sizing: border-box;
 	}
+
 	.skillType {
 		width: fit-content;
 
@@ -55,22 +56,27 @@ export const Container = styled.section`
 	@media only screen and (min-width: 680px) {
 		min-height: 44rem;
 		.skillsDiv {
-			gap: 2rem;
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: flex-start;
+			max-width: 80%;
 		}
 	}
 
 	@media only screen and (min-width: 1024px) {
 		.skillsDiv {
-			gap: 2rem;
+			gap: 1rem;
+			width: 100%;
+			max-width: 70rem;
+			margin-top: 0;
+			margin-bottom: 0;
 			justify-content: space-between;
 		}
 
 		.skillType-title {
 			width: fit-content;
 			font-size: 28px;
+		}
+
+		.skillType-list {
+			flex-direction: row;
 		}
 	}
 `;
