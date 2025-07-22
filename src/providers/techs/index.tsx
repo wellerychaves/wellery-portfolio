@@ -6,45 +6,44 @@ type ProviderProps = {
 };
 
 type Techs = {
-	programmingLanguages: string[];
-	frontEndDev: string[];
-	backEndDev: string[];
-	softwareAndTools: string[];
+	frontEnd: string[];
+	backEnd: string[];
+	database: string[];
+	versionControl: string[];
+	tests: string[];
+	devops: string[];
+	learning: string[];
 };
 
 export const TechsContext = createContext<Techs>({
-	programmingLanguages: [],
-	frontEndDev: [],
-	backEndDev: [],
-	softwareAndTools: []
+	frontEnd: [],
+	backEnd: [],
+	database: [],
+	versionControl: [],
+	tests: [],
+	devops: [],
+	learning: []
 });
 
 export const TechsProvider = ({ children }: ProviderProps) => {
-	const programmingLanguages = ["JavaScript", "Python", "TypeScript"];
-	const frontEndDev = ["Axios", "CSS3", "ContextAPI", "HTML5", "Styled Components", "React", "Redux", "TailwindCSS"];
-	const backEndDev = ["Django", "Docker", "Express", "Jest", "JWT", "NodeJS", "PostgreSQL", "Rest Framework"];
-	const softwareAndTools = [
-		"Figma",
-		"Git",
-		"GitHub",
-		"HTTPie",
-		"NPM",
-		"Obsidian",
-		"Trello",
-		"Visual Studio Code",
-		"Vite",
-		"Windows Terminal",
-		"WSL2",
-		"Yarn"
-	];
+	const frontEnd = ["JavaScript", "TypeScript", "React", "ContextAPI", "HTML5", "Styled Components", "TailwindCSS"];
+	const backEnd = ["Node.js", "Bun", "Express", "Honojs", "REST APIs"];
+	const database = ["PostgreSQL", "Redis"];
+	const versionControl = ["Git", "GitHub"];
+	const tests = ["Bun test", "Jest"];
+	const devops = ["Docker", "Google Cloud Platform", "Vercel"];
+	const learning = ["Next.js", "DrizzleORM"];
 
 	return (
 		<TechsContext.Provider
 			value={{
-				programmingLanguages,
-				frontEndDev,
-				backEndDev,
-				softwareAndTools
+				frontEnd,
+				backEnd,
+				database,
+				versionControl,
+				tests,
+				devops,
+				learning
 			}}
 		>
 			{children}

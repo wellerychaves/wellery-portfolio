@@ -10,6 +10,5 @@ RUN bun run build
 
 FROM nginx:1.29-alpine
 
-COPY --from=builder /app/dist/ usr/share/nginx/html
-
+COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 80

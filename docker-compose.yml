@@ -1,5 +1,5 @@
 services:
-  wellery_portfolio:
+  wellery_app:
     build: .
     container_name: wellery_portfolio
     restart: unless-stopped
