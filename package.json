@@ -7,7 +7,7 @@
 		"dev": "bunx --bun vite",
 		"build": "bunx --bun vite build",
 		"lint": "bunx biome check --write .",
-		"preview": "vite preview"
+		"preview": "vite preview --host 0.0.0.0"
 	},
 	"dependencies": {
 		"@emailjs/browser": "^3.12.1",
