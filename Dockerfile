@@ -5,10 +5,17 @@ WORKDIR /app
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 
-COPY . . 
+COPY . .
 RUN bun run build
 
-FROM nginx:1.29-alpine
+FROM oven/bun:1.3.5-alpine AS production
 
-COPY --from=builder /app/dist /usr/share/nginx/html
-EXPOSE 80
+WORKDIR /app
+
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/node_modules ./node_modules
+
+EXPOSE 4173
+
+CMD ["bun", "run", "preview"]
