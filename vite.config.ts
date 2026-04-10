@@ -3,5 +3,10 @@ import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()]
+	plugins: [react()],
+	preview: {
+		host: "0.0.0.0",
+		port: 4173,
+		allowedHosts: [".wellery.cc"]
+	}
 });
