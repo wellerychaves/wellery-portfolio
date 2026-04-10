@@ -3,6 +3,8 @@ services:
     build: .
     container_name: wellery_portfolio
     restart: unless-stopped
+    ports:
+      - "4173:4173"
     networks: [central_proxy_net]
 networks:
   central_proxy_net: { external: true }
