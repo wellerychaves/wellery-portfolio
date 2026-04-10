@@ -3,9 +3,11 @@
 		"strict": true,
 		"composite": true,
 		"module": "ESNext",
-		"moduleResolution": "Node",
+		"moduleResolution": "Bundler",
 		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true
 	},
-	"include": ["vite.config.ts"]
+	"include": [
+		"vite.config.ts"
+	]
 }
