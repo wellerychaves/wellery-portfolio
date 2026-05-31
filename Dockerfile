@@ -1,21 +1,10 @@
 FROM oven/bun:1.3.14-alpine AS builder
-
 WORKDIR /app
-
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
-
 COPY . .
 RUN bun run build
 
-FROM oven/bun:1.3.14-alpine AS production
-
-WORKDIR /app
-
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/node_modules ./node_modules
-
+FROM nginx:alpine AS production
+COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 1400
-
-CMD ["bun", "run", "preview"]

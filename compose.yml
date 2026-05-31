@@ -5,6 +5,3 @@ services:
         restart: unless-stopped
         ports:
             - "1400:1400"
-        networks: [central_proxy_net]
-networks:
-    central_proxy_net: { external: true }
