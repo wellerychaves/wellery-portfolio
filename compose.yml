@@ -4,4 +4,4 @@ services:
         container_name: wellery_portfolio
         restart: unless-stopped
         ports:
-            - "1400:1400"
+            - "1400:80"
