@@ -1,7 +1,8 @@
 services:
-    wellery_app:
-        build: .
-        container_name: wellery_portfolio
-        restart: unless-stopped
-        ports:
-            - "1400:80"
+  portfolio:
+    build: .
+    image: wellery-portfolio
+    container_name: wellery-portfolio
+    restart: unless-stopped
+    ports:
+      - "1400:80"
