@@ -2,6 +2,7 @@ services:
   portfolio:
     build: .
     image: wellery-portfolio
+    pull_policy: build
     container_name: wellery-portfolio
     restart: unless-stopped
     ports:
