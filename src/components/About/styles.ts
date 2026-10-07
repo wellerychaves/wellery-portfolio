@@ -66,54 +66,6 @@ export const ContentRight = styled.div`
 	}
 `;
 
-export const InfoBox = styled.div`
-	width: 100%;
-	padding: 1rem 1.5rem;
-	margin: 0 auto;
-
-	gap: 0.5rem;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: space-between;
-
-	border: 2px solid ${(props) => props.theme.colors.primary};
-	border-radius: 5px;
-
-	.row {
-		width: 100%;
-		height: 100%;
-		margin: 0 auto;
-
-		gap: 0.5rem;
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	p {
-		font-size: 1.2rem;
-		font-weight: 400;
-	}
-
-	span {
-		font-weight: 500;
-	}
-
-	@media screen and (min-width: 756px) {
-		max-width: 37rem;
-		height: 12rem;
-		max-height: 12rem;
-
-		flex-direction: row;
-
-		.row {
-			gap: 1rem;
-		}
-	}
-`;
-
 export const ImageBox = styled.figure`
 	width: 100%;
 	height: 100vw;
@@ -145,9 +97,9 @@ export const ImageBox = styled.figure`
 `;
 
 export const StyledA = styled.a`
-	max-width: 9rem;
+	max-width: 8rem;
 
-	font-size: 1rem;
+	font-size: 1.2rem;
 
 	display: flex;
 	align-items: center;
@@ -163,7 +115,7 @@ export const StyledA = styled.a`
 	}
 
 	@media only screen and (min-width: 756px) {
-		max-width: 168px;
-		font-size: 1.125rem;
+		max-width: 7rem;
+		font-size: 1.3;
 	}
 `;
