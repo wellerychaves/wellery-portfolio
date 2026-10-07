@@ -56,6 +56,16 @@ const Header: React.FC<HeaderProps> = ({ aboutRef, techsRef, portfolioRef, conta
 								</button>
 							</li>
 							<li className="navBar_li">
+								<a
+									className="buttonReset"
+									href="https://blog.wellery.cc"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Blog
+								</a>
+							</li>
+							<li className="navBar_li">
 								<button className="buttonReset" type="button" onClick={() => scrollToSection("techs")}>
 									Techs
 								</button>
@@ -75,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({ aboutRef, techsRef, portfolioRef, conta
 									type="button"
 									onClick={() => scrollToSection("contact")}
 								>
-									Contact-me
+									Contact
 								</button>
 							</li>
 						</ul>
@@ -92,6 +102,16 @@ const Header: React.FC<HeaderProps> = ({ aboutRef, techsRef, portfolioRef, conta
 								<button type="button" className="buttonReset" onClick={() => scrollToSection("about")}>
 									About Me
 								</button>
+							</li>
+							<li className="navBar_li">
+								<a
+									className="buttonReset"
+									href="https://blog.wellery.cc"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Blog
+								</a>
 							</li>
 							<li>
 								<button type="button" className="buttonReset" onClick={() => scrollToSection("techs")}>
